@@ -18,6 +18,7 @@
 		70B5CB891B5F36C200E1C3EA /* XMGMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B5CB881B5F36C200E1C3EA /* XMGMeViewController.m */; };
 		70B5CB8C1B5F39EE00E1C3EA /* XMGTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B5CB8B1B5F39EE00E1C3EA /* XMGTabBar.m */; };
 		70B5CB8F1B5F3D8200E1C3EA /* UIView+XMGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B5CB8E1B5F3D8200E1C3EA /* UIView+XMGExtension.m */; };
+		70B5CB961B5F782C00E1C3EA /* UIBarButtonItem+XMGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B5CB951B5F782C00E1C3EA /* UIBarButtonItem+XMGExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		70B5CB8D1B5F3D8200E1C3EA /* UIView+XMGExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XMGExtension.h"; sourceTree = "<group>"; };
 		70B5CB8E1B5F3D8200E1C3EA /* UIView+XMGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XMGExtension.m"; sourceTree = "<group>"; };
 		70B5CB901B5F3DB700E1C3EA /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		70B5CB941B5F782C00E1C3EA /* UIBarButtonItem+XMGExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+XMGExtension.h"; sourceTree = "<group>"; };
+		70B5CB951B5F782C00E1C3EA /* UIBarButtonItem+XMGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+XMGExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,8 @@
 				70B5CB8B1B5F39EE00E1C3EA /* XMGTabBar.m */,
 				70B5CB8D1B5F3D8200E1C3EA /* UIView+XMGExtension.h */,
 				70B5CB8E1B5F3D8200E1C3EA /* UIView+XMGExtension.m */,
+				70B5CB941B5F782C00E1C3EA /* UIBarButtonItem+XMGExtension.h */,
+				70B5CB951B5F782C00E1C3EA /* UIBarButtonItem+XMGExtension.m */,
 				70B5CB901B5F3DB700E1C3EA /* PrefixHeader.pch */,
 				70B5CB551B5F27D200E1C3EA /* Supporting Files */,
 			);
@@ -251,6 +256,7 @@
 				70B5CB801B5F369700E1C3EA /* XMGEssenceViewController.m in Sources */,
 				70B5CB891B5F36C200E1C3EA /* XMGMeViewController.m in Sources */,
 				70B5CB8C1B5F39EE00E1C3EA /* XMGTabBar.m in Sources */,
+				70B5CB961B5F782C00E1C3EA /* UIBarButtonItem+XMGExtension.m in Sources */,
 				70B5CB8F1B5F3D8200E1C3EA /* UIView+XMGExtension.m in Sources */,
 				70B5CB581B5F27D200E1C3EA /* main.m in Sources */,
 			);
