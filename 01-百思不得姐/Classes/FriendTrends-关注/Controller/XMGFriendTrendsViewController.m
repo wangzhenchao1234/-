@@ -29,4 +29,10 @@
     XMGLogFunc;
 }
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    UIViewController *vc = [[UIViewController alloc] init];
+    vc.view.backgroundColor = XMGRGBColor(200, 100, 50);
+    [self.navigationController pushViewController:vc animated:YES];
+}
 @end
