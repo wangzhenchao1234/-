@@ -14,14 +14,40 @@
 #import "XMGTabBar.h"
 #import "XMGNavigationController.h"
 
+/**
+ *
+ [UIColor colorWithRed:<#(CGFloat)#> green:<#(CGFloat)#> blue:<#(CGFloat)#> alpha:<#(CGFloat)#>];
+ 颜色:
+ 
+ 24bit颜色: R G B
+ * #ff0000
+ * #ccee00
+ * #000000
+ * #ffffff
+ 
+ 32bit颜色: ARGB
+ * #ff0000ff
+ 
+ 常见颜色:
+ #ff0000 红色
+ #00ff00 绿色
+ #0000ff 蓝色
+ #000000 黑色
+ #ffffff 白色
+ 
+ 灰色的特点:RGB一样
+ 
+ 1024x1024像素的图片  32bit颜色
+ 
+ 1024x1024x32\8 == 1024x1024x4
+ 1024x1024x24\8 == 1024x1024x3
+ */
+
+
 @implementation XMGTabBarController
 
-- (void)viewDidLoad
++ (void)initialize
 {
-    [super viewDidLoad];
-    
-    [UINavigationBar appearance];
-    
     // 通过appearance统一设置所有UITabBarItem的文字属性
     // 后面带有UI_APPEARANCE_SELECTOR的方法, 都可以通过appearance对象来统一设置
     NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
@@ -35,6 +61,11 @@
     UITabBarItem *item = [UITabBarItem appearance];
     [item setTitleTextAttributes:attrs forState:UIControlStateNormal];
     [item setTitleTextAttributes:selectedAttrs forState:UIControlStateSelected];
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
     
     // 添加子控制器
     [self setupChildVc:[[XMGEssenceViewController alloc] init] title:@"精华" image:@"tabBar_essence_icon" selectedImage:@"tabBar_essence_click_icon"];
@@ -62,7 +93,6 @@
     
     // 包装一个导航控制器, 添加导航控制器为tabbarcontroller的子控制器
     XMGNavigationController *nav = [[XMGNavigationController alloc] initWithRootViewController:vc];
-    [nav.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
     [self addChildViewController:nav];
 }
 @end

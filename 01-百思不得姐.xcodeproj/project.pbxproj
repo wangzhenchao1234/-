@@ -19,8 +19,8 @@
 		70B5CBC71B5F7EEF00E1C3EA /* XMGTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B5CBBA1B5F7EEF00E1C3EA /* XMGTabBarController.m */; };
 		70B5CBC81B5F7EEF00E1C3EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B5CBBB1B5F7EEF00E1C3EA /* main.m */; };
 		70B5CBC91B5F7EEF00E1C3EA /* XMGTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B5CBBF1B5F7EEF00E1C3EA /* XMGTabBar.m */; };
-		70B5CBCC1B5F837F00E1C3EA /* XMGTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B5CBCB1B5F837F00E1C3EA /* XMGTestViewController.m */; };
 		70B5CBCF1B5F848E00E1C3EA /* XMGNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B5CBCE1B5F848E00E1C3EA /* XMGNavigationController.m */; };
+		70B5CBD11B5F942F00E1C3EA /* XMGFriendTrendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70B5CBD01B5F942F00E1C3EA /* XMGFriendTrendsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,10 +60,9 @@
 		70B5CBBC1B5F7EEF00E1C3EA /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		70B5CBBE1B5F7EEF00E1C3EA /* XMGTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTabBar.h; sourceTree = "<group>"; };
 		70B5CBBF1B5F7EEF00E1C3EA /* XMGTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTabBar.m; sourceTree = "<group>"; };
-		70B5CBCA1B5F837F00E1C3EA /* XMGTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTestViewController.h; sourceTree = "<group>"; };
-		70B5CBCB1B5F837F00E1C3EA /* XMGTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTestViewController.m; sourceTree = "<group>"; };
 		70B5CBCD1B5F848E00E1C3EA /* XMGNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGNavigationController.h; sourceTree = "<group>"; };
 		70B5CBCE1B5F848E00E1C3EA /* XMGNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGNavigationController.m; sourceTree = "<group>"; };
+		70B5CBD01B5F942F00E1C3EA /* XMGFriendTrendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGFriendTrendsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +196,7 @@
 			children = (
 				70B5CBA01B5F7EEF00E1C3EA /* XMGFriendTrendsViewController.h */,
 				70B5CBA11B5F7EEF00E1C3EA /* XMGFriendTrendsViewController.m */,
+				70B5CBD01B5F942F00E1C3EA /* XMGFriendTrendsViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -291,8 +291,6 @@
 				70B5CBB21B5F7EEF00E1C3EA /* AppDelegate.m */,
 				70B5CBBB1B5F7EEF00E1C3EA /* main.m */,
 				70B5CBBC1B5F7EEF00E1C3EA /* PrefixHeader.pch */,
-				70B5CBCA1B5F837F00E1C3EA /* XMGTestViewController.h */,
-				70B5CBCB1B5F837F00E1C3EA /* XMGTestViewController.m */,
 			);
 			path = "Other-其他";
 			sourceTree = "<group>";
@@ -410,6 +408,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70B5CB631B5F27D200E1C3EA /* Images.xcassets in Resources */,
+				70B5CBD11B5F942F00E1C3EA /* XMGFriendTrendsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,7 +437,6 @@
 				70B5CBC41B5F7EEF00E1C3EA /* AppDelegate.m in Sources */,
 				70B5CBC81B5F7EEF00E1C3EA /* main.m in Sources */,
 				70B5CBC51B5F7EEF00E1C3EA /* UIBarButtonItem+XMGExtension.m in Sources */,
-				70B5CBCC1B5F837F00E1C3EA /* XMGTestViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

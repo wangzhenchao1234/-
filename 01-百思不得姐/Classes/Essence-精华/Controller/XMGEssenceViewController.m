@@ -7,7 +7,6 @@
 //
 
 #import "XMGEssenceViewController.h"
-#import "XMGTestViewController.h"
 
 @implementation XMGEssenceViewController
 
@@ -28,11 +27,5 @@
 - (void)tagClick
 {
     XMGLogFunc;
-}
-
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    XMGTestViewController *vc = [[XMGTestViewController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
 }
 @end
