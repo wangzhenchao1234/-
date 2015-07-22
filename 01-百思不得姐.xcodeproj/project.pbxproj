@@ -16,6 +16,7 @@
 		70B5CB831B5F36A600E1C3EA /* XMGNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B5CB821B5F36A600E1C3EA /* XMGNewViewController.m */; };
 		70B5CB861B5F36B900E1C3EA /* XMGFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B5CB851B5F36B900E1C3EA /* XMGFriendTrendsViewController.m */; };
 		70B5CB891B5F36C200E1C3EA /* XMGMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B5CB881B5F36C200E1C3EA /* XMGMeViewController.m */; };
+		70B5CB8C1B5F39EE00E1C3EA /* XMGTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B5CB8B1B5F39EE00E1C3EA /* XMGTabBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,8 @@
 		70B5CB851B5F36B900E1C3EA /* XMGFriendTrendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGFriendTrendsViewController.m; sourceTree = "<group>"; };
 		70B5CB871B5F36C200E1C3EA /* XMGMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGMeViewController.h; sourceTree = "<group>"; };
 		70B5CB881B5F36C200E1C3EA /* XMGMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGMeViewController.m; sourceTree = "<group>"; };
+		70B5CB8A1B5F39EE00E1C3EA /* XMGTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTabBar.h; sourceTree = "<group>"; };
+		70B5CB8B1B5F39EE00E1C3EA /* XMGTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTabBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,8 @@
 				70B5CB881B5F36C200E1C3EA /* XMGMeViewController.m */,
 				70B5CB7B1B5F2C4500E1C3EA /* XMGTabBarController.h */,
 				70B5CB7C1B5F2C4500E1C3EA /* XMGTabBarController.m */,
+				70B5CB8A1B5F39EE00E1C3EA /* XMGTabBar.h */,
+				70B5CB8B1B5F39EE00E1C3EA /* XMGTabBar.m */,
 				70B5CB551B5F27D200E1C3EA /* Supporting Files */,
 			);
 			path = "01-百思不得姐";
@@ -238,6 +243,7 @@
 				70B5CB861B5F36B900E1C3EA /* XMGFriendTrendsViewController.m in Sources */,
 				70B5CB801B5F369700E1C3EA /* XMGEssenceViewController.m in Sources */,
 				70B5CB891B5F36C200E1C3EA /* XMGMeViewController.m in Sources */,
+				70B5CB8C1B5F39EE00E1C3EA /* XMGTabBar.m in Sources */,
 				70B5CB581B5F27D200E1C3EA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
