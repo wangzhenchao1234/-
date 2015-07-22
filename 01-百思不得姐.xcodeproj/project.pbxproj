@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		70B5CB581B5F27D200E1C3EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B5CB571B5F27D200E1C3EA /* main.m */; };
 		70B5CB5B1B5F27D200E1C3EA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B5CB5A1B5F27D200E1C3EA /* AppDelegate.m */; };
-		70B5CB5E1B5F27D200E1C3EA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B5CB5D1B5F27D200E1C3EA /* ViewController.m */; };
 		70B5CB631B5F27D200E1C3EA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70B5CB621B5F27D200E1C3EA /* Images.xcassets */; };
 		70B5CB721B5F27D200E1C3EA /* _1______Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B5CB711B5F27D200E1C3EA /* _1______Tests.m */; };
+		70B5CB7D1B5F2C4500E1C3EA /* XMGTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B5CB7C1B5F2C4500E1C3EA /* XMGTabBarController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,12 +30,12 @@
 		70B5CB571B5F27D200E1C3EA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		70B5CB591B5F27D200E1C3EA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		70B5CB5A1B5F27D200E1C3EA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		70B5CB5C1B5F27D200E1C3EA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		70B5CB5D1B5F27D200E1C3EA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		70B5CB621B5F27D200E1C3EA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		70B5CB6B1B5F27D200E1C3EA /* 01-百思不得姐Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "01-百思不得姐Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70B5CB701B5F27D200E1C3EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70B5CB711B5F27D200E1C3EA /* _1______Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_1______Tests.m"; sourceTree = "<group>"; };
+		70B5CB7B1B5F2C4500E1C3EA /* XMGTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTabBarController.h; sourceTree = "<group>"; };
+		70B5CB7C1B5F2C4500E1C3EA /* XMGTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTabBarController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +79,8 @@
 			children = (
 				70B5CB591B5F27D200E1C3EA /* AppDelegate.h */,
 				70B5CB5A1B5F27D200E1C3EA /* AppDelegate.m */,
-				70B5CB5C1B5F27D200E1C3EA /* ViewController.h */,
-				70B5CB5D1B5F27D200E1C3EA /* ViewController.m */,
+				70B5CB7B1B5F2C4500E1C3EA /* XMGTabBarController.h */,
+				70B5CB7C1B5F2C4500E1C3EA /* XMGTabBarController.m */,
 				70B5CB551B5F27D200E1C3EA /* Supporting Files */,
 			);
 			path = "01-百思不得姐";
@@ -157,6 +157,7 @@
 		70B5CB4A1B5F27D200E1C3EA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = XMG;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "小码哥";
 				TargetAttributes = {
@@ -211,7 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70B5CB5E1B5F27D200E1C3EA /* ViewController.m in Sources */,
+				70B5CB7D1B5F2C4500E1C3EA /* XMGTabBarController.m in Sources */,
 				70B5CB5B1B5F27D200E1C3EA /* AppDelegate.m in Sources */,
 				70B5CB581B5F27D200E1C3EA /* main.m in Sources */,
 			);
@@ -393,6 +394,7 @@
 				70B5CB771B5F27D200E1C3EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		70B5CB781B5F27D200E1C3EA /* Build configuration list for PBXNativeTarget "01-百思不得姐Tests" */ = {
 			isa = XCConfigurationList;
@@ -401,6 +403,7 @@
 				70B5CB7A1B5F27D200E1C3EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

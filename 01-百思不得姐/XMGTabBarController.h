@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  XMGTabBarController.h
 //  01-百思不得姐
 //
 //  Created by xiaomage on 15/7/22.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface XMGTabBarController : UITabBarController
 
 @end
-
