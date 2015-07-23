@@ -24,6 +24,9 @@
 		70B5CBDF1B5F998300E1C3EA /* XMGRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B5CBDD1B5F998300E1C3EA /* XMGRecommendViewController.m */; };
 		70B5CBE01B5F998300E1C3EA /* XMGRecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70B5CBDE1B5F998300E1C3EA /* XMGRecommendViewController.xib */; };
 		70B5CBE21B5F9A8100E1C3EA /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B5CBE11B5F9A8100E1C3EA /* Foundation+Log.m */; };
+		70DA0D401B60760600DD59F1 /* XMGRecommendCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 70DA0D3F1B60760600DD59F1 /* XMGRecommendCategory.m */; };
+		70DA0D441B60775600DD59F1 /* XMGRecommendCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 70DA0D421B60775600DD59F1 /* XMGRecommendCategoryCell.m */; };
+		70DA0D451B60775600DD59F1 /* XMGRecommendCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70DA0D431B60775600DD59F1 /* XMGRecommendCategoryCell.xib */; };
 		DA9E81567E8AC4629608A735 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E96429885DFBC9344ACBB0 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +75,11 @@
 		70B5CBDD1B5F998300E1C3EA /* XMGRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGRecommendViewController.m; sourceTree = "<group>"; };
 		70B5CBDE1B5F998300E1C3EA /* XMGRecommendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGRecommendViewController.xib; sourceTree = "<group>"; };
 		70B5CBE11B5F9A8100E1C3EA /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
+		70DA0D3E1B60760600DD59F1 /* XMGRecommendCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGRecommendCategory.h; sourceTree = "<group>"; };
+		70DA0D3F1B60760600DD59F1 /* XMGRecommendCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGRecommendCategory.m; sourceTree = "<group>"; };
+		70DA0D411B60775600DD59F1 /* XMGRecommendCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGRecommendCategoryCell.h; sourceTree = "<group>"; };
+		70DA0D421B60775600DD59F1 /* XMGRecommendCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGRecommendCategoryCell.m; sourceTree = "<group>"; };
+		70DA0D431B60775600DD59F1 /* XMGRecommendCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGRecommendCategoryCell.xib; sourceTree = "<group>"; };
 		97E96429885DFBC9344ACBB0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ED90CEC200918F803FF50AF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -230,6 +238,8 @@
 		70B5CBA21B5F7EEF00E1C3EA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				70DA0D3E1B60760600DD59F1 /* XMGRecommendCategory.h */,
+				70DA0D3F1B60760600DD59F1 /* XMGRecommendCategory.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -237,6 +247,9 @@
 		70B5CBA31B5F7EEF00E1C3EA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				70DA0D411B60775600DD59F1 /* XMGRecommendCategoryCell.h */,
+				70DA0D421B60775600DD59F1 /* XMGRecommendCategoryCell.m */,
+				70DA0D431B60775600DD59F1 /* XMGRecommendCategoryCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -445,6 +458,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70B5CBE01B5F998300E1C3EA /* XMGRecommendViewController.xib in Resources */,
+				70DA0D451B60775600DD59F1 /* XMGRecommendCategoryCell.xib in Resources */,
 				70B5CB631B5F27D200E1C3EA /* Images.xcassets in Resources */,
 				70B5CBD11B5F942F00E1C3EA /* XMGFriendTrendsViewController.xib in Resources */,
 			);
@@ -498,9 +512,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				70B5CBDF1B5F998300E1C3EA /* XMGRecommendViewController.m in Sources */,
+				70DA0D401B60760600DD59F1 /* XMGRecommendCategory.m in Sources */,
 				70B5CBCF1B5F848E00E1C3EA /* XMGNavigationController.m in Sources */,
 				70B5CBC91B5F7EEF00E1C3EA /* XMGTabBar.m in Sources */,
 				70B5CBC21B5F7EEF00E1C3EA /* XMGMeViewController.m in Sources */,
+				70DA0D441B60775600DD59F1 /* XMGRecommendCategoryCell.m in Sources */,
 				70B5CBC01B5F7EEF00E1C3EA /* XMGEssenceViewController.m in Sources */,
 				70B5CBC31B5F7EEF00E1C3EA /* XMGNewViewController.m in Sources */,
 				70B5CBC61B5F7EEF00E1C3EA /* UIView+XMGExtension.m in Sources */,
