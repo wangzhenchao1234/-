@@ -21,6 +21,10 @@
 		70B5CBC91B5F7EEF00E1C3EA /* XMGTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B5CBBF1B5F7EEF00E1C3EA /* XMGTabBar.m */; };
 		70B5CBCF1B5F848E00E1C3EA /* XMGNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B5CBCE1B5F848E00E1C3EA /* XMGNavigationController.m */; };
 		70B5CBD11B5F942F00E1C3EA /* XMGFriendTrendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70B5CBD01B5F942F00E1C3EA /* XMGFriendTrendsViewController.xib */; };
+		70B5CBDF1B5F998300E1C3EA /* XMGRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B5CBDD1B5F998300E1C3EA /* XMGRecommendViewController.m */; };
+		70B5CBE01B5F998300E1C3EA /* XMGRecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70B5CBDE1B5F998300E1C3EA /* XMGRecommendViewController.xib */; };
+		70B5CBE21B5F9A8100E1C3EA /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B5CBE11B5F9A8100E1C3EA /* Foundation+Log.m */; };
+		DA9E81567E8AC4629608A735 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E96429885DFBC9344ACBB0 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F4AC0CDDAD2434541620CAF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		70B5CB521B5F27D200E1C3EA /* 01-百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "01-百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70B5CB561B5F27D200E1C3EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70B5CB621B5F27D200E1C3EA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -63,6 +68,12 @@
 		70B5CBCD1B5F848E00E1C3EA /* XMGNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGNavigationController.h; sourceTree = "<group>"; };
 		70B5CBCE1B5F848E00E1C3EA /* XMGNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGNavigationController.m; sourceTree = "<group>"; };
 		70B5CBD01B5F942F00E1C3EA /* XMGFriendTrendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGFriendTrendsViewController.xib; sourceTree = "<group>"; };
+		70B5CBDC1B5F998300E1C3EA /* XMGRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGRecommendViewController.h; sourceTree = "<group>"; };
+		70B5CBDD1B5F998300E1C3EA /* XMGRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGRecommendViewController.m; sourceTree = "<group>"; };
+		70B5CBDE1B5F998300E1C3EA /* XMGRecommendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGRecommendViewController.xib; sourceTree = "<group>"; };
+		70B5CBE11B5F9A8100E1C3EA /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
+		97E96429885DFBC9344ACBB0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9ED90CEC200918F803FF50AF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA9E81567E8AC4629608A735 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,12 +95,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13DB98A462174515324DABD5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9ED90CEC200918F803FF50AF /* Pods.debug.xcconfig */,
+				1F4AC0CDDAD2434541620CAF /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		70B5CB491B5F27D200E1C3EA = {
 			isa = PBXGroup;
 			children = (
 				70B5CB541B5F27D200E1C3EA /* 01-百思不得姐 */,
 				70B5CB6E1B5F27D200E1C3EA /* 01-百思不得姐Tests */,
 				70B5CB531B5F27D200E1C3EA /* Products */,
+				13DB98A462174515324DABD5 /* Pods */,
+				A3776C8678EE141D0787AB77 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -197,6 +220,9 @@
 				70B5CBA01B5F7EEF00E1C3EA /* XMGFriendTrendsViewController.h */,
 				70B5CBA11B5F7EEF00E1C3EA /* XMGFriendTrendsViewController.m */,
 				70B5CBD01B5F942F00E1C3EA /* XMGFriendTrendsViewController.xib */,
+				70B5CBDC1B5F998300E1C3EA /* XMGRecommendViewController.h */,
+				70B5CBDD1B5F998300E1C3EA /* XMGRecommendViewController.m */,
+				70B5CBDE1B5F998300E1C3EA /* XMGRecommendViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -289,6 +315,7 @@
 				70B5CBB31B5F7EEF00E1C3EA /* Category */,
 				70B5CBB11B5F7EEF00E1C3EA /* AppDelegate.h */,
 				70B5CBB21B5F7EEF00E1C3EA /* AppDelegate.m */,
+				70B5CBE11B5F9A8100E1C3EA /* Foundation+Log.m */,
 				70B5CBBB1B5F7EEF00E1C3EA /* main.m */,
 				70B5CBBC1B5F7EEF00E1C3EA /* PrefixHeader.pch */,
 			);
@@ -326,6 +353,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		A3776C8678EE141D0787AB77 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				97E96429885DFBC9344ACBB0 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -333,9 +368,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 70B5CB751B5F27D200E1C3EA /* Build configuration list for PBXNativeTarget "01-百思不得姐" */;
 			buildPhases = (
+				EF654DF959B9B95912CE7F2F /* Check Pods Manifest.lock */,
 				70B5CB4E1B5F27D200E1C3EA /* Sources */,
 				70B5CB4F1B5F27D200E1C3EA /* Frameworks */,
 				70B5CB501B5F27D200E1C3EA /* Resources */,
+				D3F78339517D187B4C4D0DC8 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -407,6 +444,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70B5CBE01B5F998300E1C3EA /* XMGRecommendViewController.xib in Resources */,
 				70B5CB631B5F27D200E1C3EA /* Images.xcassets in Resources */,
 				70B5CBD11B5F942F00E1C3EA /* XMGFriendTrendsViewController.xib in Resources */,
 			);
@@ -421,11 +459,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D3F78339517D187B4C4D0DC8 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF654DF959B9B95912CE7F2F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		70B5CB4E1B5F27D200E1C3EA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70B5CBDF1B5F998300E1C3EA /* XMGRecommendViewController.m in Sources */,
 				70B5CBCF1B5F848E00E1C3EA /* XMGNavigationController.m in Sources */,
 				70B5CBC91B5F7EEF00E1C3EA /* XMGTabBar.m in Sources */,
 				70B5CBC21B5F7EEF00E1C3EA /* XMGMeViewController.m in Sources */,
@@ -435,6 +507,7 @@
 				70B5CBC71B5F7EEF00E1C3EA /* XMGTabBarController.m in Sources */,
 				70B5CBC11B5F7EEF00E1C3EA /* XMGFriendTrendsViewController.m in Sources */,
 				70B5CBC41B5F7EEF00E1C3EA /* AppDelegate.m in Sources */,
+				70B5CBE21B5F9A8100E1C3EA /* Foundation+Log.m in Sources */,
 				70B5CBC81B5F7EEF00E1C3EA /* main.m in Sources */,
 				70B5CBC51B5F7EEF00E1C3EA /* UIBarButtonItem+XMGExtension.m in Sources */,
 			);
@@ -543,6 +616,7 @@
 		};
 		70B5CB761B5F27D200E1C3EA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9ED90CEC200918F803FF50AF /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -555,6 +629,7 @@
 		};
 		70B5CB771B5F27D200E1C3EA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F4AC0CDDAD2434541620CAF /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
