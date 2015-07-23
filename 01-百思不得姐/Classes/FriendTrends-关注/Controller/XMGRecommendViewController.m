@@ -19,9 +19,6 @@
 /** 左边的类别数据 */
 @property (nonatomic, strong) NSArray *categories;
 
-/** 右边的用户数据 */
-@property (nonatomic, strong) NSArray *users;
-
 /** 左边的类别表格 */
 @property (weak, nonatomic) IBOutlet UITableView *categoryTableView;
 /** 右边的用户表格 */
@@ -89,7 +86,9 @@ static NSString * const XMGUserId = @"user";
     if (tableView == self.categoryTableView) { // 左边的类别表格
         return self.categories.count;
     } else { // 右边的用户表格
-        return self.users.count;
+        // 左边被选中的类别模型
+        XMGRecommendCategory *c = self.categories[self.categoryTableView.indexPathForSelectedRow.row];
+        return c.users.count;
     }
 }
 
@@ -101,7 +100,8 @@ static NSString * const XMGUserId = @"user";
         return cell;
     } else { // 右边的用户表格
         XMGRecommendUserCell *cell = [tableView dequeueReusableCellWithIdentifier:XMGUserId];
-        cell.user = self.users[indexPath.row];
+        XMGRecommendCategory *c = self.categories[self.categoryTableView.indexPathForSelectedRow.row];
+        cell.user = c.users[indexPath.row];
         return cell;
     }
 }
@@ -111,26 +111,33 @@ static NSString * const XMGUserId = @"user";
 {
     XMGRecommendCategory *c = self.categories[indexPath.row];
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    if (c.users.count) {
+        // 显示曾经的数据
+        [self.userTableView reloadData];
+    } else {
         // 发送请求给服务器, 加载右侧的数据
         NSMutableDictionary *params = [NSMutableDictionary dictionary];
         params[@"a"] = @"list";
         params[@"c"] = @"subscribe";
         params[@"category_id"] = @(c.id);
         [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
-            self.users = [XMGRecommendUser objectArrayWithKeyValuesArray:responseObject[@"list"]];
+            // 字典数组 -> 模型数组
+            NSArray *users = [XMGRecommendUser objectArrayWithKeyValuesArray:responseObject[@"list"]];
+            
+            // 添加到当前类别对应的用户数组中
+            [c.users addObjectsFromArray:users];
             
             // 刷新右边的表格
             [self.userTableView reloadData];
         } failure:^(NSURLSessionDataTask *task, NSError *error) {
             XMGLog(@"%@", error);
         }];
-    });
+    }
 }
 
 /**
- 1.目前只能显示1页数据
- 2.重复发送请求
+ 1.重复发送请求
+ 2.目前只能显示1页数据
  3.网络慢带来的细节问题
  */
 @end

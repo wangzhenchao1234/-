@@ -21,8 +21,8 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFH-Ml-rgd">
-                        <rect key="frame" x="70" y="20" width="42" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="70" y="20" width="170" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -60,6 +60,7 @@
                     <constraint firstAttribute="centerY" secondItem="pzy-pn-nau" secondAttribute="centerY" id="8jI-6F-zTT"/>
                     <constraint firstAttribute="bottom" secondItem="Rrp-KX-mYK" secondAttribute="bottom" id="HsW-re-2H9"/>
                     <constraint firstAttribute="trailing" secondItem="Rrp-KX-mYK" secondAttribute="trailing" id="L4i-HF-tkg"/>
+                    <constraint firstItem="pzy-pn-nau" firstAttribute="leading" secondItem="bFH-Ml-rgd" secondAttribute="trailing" constant="10" id="YEU-gv-wGu"/>
                     <constraint firstAttribute="centerY" secondItem="7HG-rc-Gtf" secondAttribute="centerY" id="e0z-4m-sQT"/>
                     <constraint firstItem="bFH-Ml-rgd" firstAttribute="leading" secondItem="7HG-rc-Gtf" secondAttribute="trailing" constant="10" id="iqR-wP-7hO"/>
                     <constraint firstItem="7HG-rc-Gtf" firstAttribute="top" secondItem="bFH-Ml-rgd" secondAttribute="top" id="t9u-Gh-uuR"/>
