@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XMGRecommendViewController">
             <connections>
                 <outlet property="categoryTableView" destination="4ZA-VG-JXL" id="XSM-5O-DFt"/>
+                <outlet property="userTableView" destination="tra-4f-LEp" id="YQs-zw-VXR"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -26,11 +27,22 @@
                         <outlet property="delegate" destination="-1" id="IGx-it-As5"/>
                     </connections>
                 </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="tra-4f-LEp" userLabel="右侧">
+                    <rect key="frame" x="70" y="0.0" width="530" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="d16-kC-yOB"/>
+                    </connections>
+                </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="4ZA-VG-JXL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="45y-mb-nl1"/>
+                <constraint firstItem="tra-4f-LEp" firstAttribute="leading" secondItem="4ZA-VG-JXL" secondAttribute="trailing" id="9QB-Ac-Hce"/>
+                <constraint firstAttribute="bottom" secondItem="tra-4f-LEp" secondAttribute="bottom" id="AfV-Iz-2U0"/>
+                <constraint firstItem="tra-4f-LEp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="p2G-27-0wV"/>
                 <constraint firstItem="4ZA-VG-JXL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="pCs-V6-6h0"/>
+                <constraint firstAttribute="trailing" secondItem="tra-4f-LEp" secondAttribute="trailing" id="rGP-IC-fhZ"/>
                 <constraint firstAttribute="bottom" secondItem="4ZA-VG-JXL" secondAttribute="bottom" id="yUW-uO-X8F"/>
             </constraints>
         </view>

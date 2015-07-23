@@ -20,12 +20,8 @@
     self.backgroundColor = XMGRGBColor(244, 244, 244);
     self.selectedIndicator.backgroundColor = XMGRGBColor(219, 21, 26);
     
-    // 当cell的selection为None时, cell被选中时, 内部的子控件就不会进入高亮状态
-//    self.textLabel.textColor = XMGRGBColor(78, 78, 78);
+    // 当cell的selection为None时, 即使cell被选中了, 内部的子控件也不会进入高亮状态
 //    self.textLabel.highlightedTextColor = XMGRGBColor(219, 21, 26);
-//    UIView *bg = [[UIView alloc] init];
-//    bg.backgroundColor = [UIColor clearColor];
-//    self.selectedBackgroundView = bg;
 }
 
 - (void)setCategory:(XMGRecommendCategory *)category
@@ -44,6 +40,9 @@
     self.textLabel.height = self.contentView.height - 2 * self.textLabel.y;
 }
 
+/**
+ * 可以在这个方法中监听cell的选中和取消选中
+ */
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];
