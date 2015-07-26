@@ -9,7 +9,6 @@
 #import "XMGLoginRegisterViewController.h"
 
 @interface XMGLoginRegisterViewController ()
-@property (weak, nonatomic) IBOutlet UIImageView *bgView;
 
 @end
 
@@ -18,7 +17,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.view insertSubview:self.bgView atIndex:0];
 }
 
 - (void)didReceiveMemoryWarning {
