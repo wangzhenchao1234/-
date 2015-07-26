@@ -7,12 +7,20 @@
 //
 
 #import "XMGEssenceViewController.h"
+#import "XMGRecommendTagsViewController.h"
+#import "XMGTestView.h"
 
 @implementation XMGEssenceViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    XMGTestView *testView = [[XMGTestView alloc] init];
+    testView.frame = CGRectMake(100, 100, 0, 1000);
+    testView.bounds = CGRectMake(0, 0, 10, 10);
+    testView.backgroundColor = [UIColor redColor];
+    [self.view addSubview:testView];
     
     // 设置导航栏标题
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]];
@@ -26,6 +34,7 @@
 
 - (void)tagClick
 {
-    XMGLogFunc;
+    XMGRecommendTagsViewController *tags = [[XMGRecommendTagsViewController alloc] init];
+    [self.navigationController pushViewController:tags animated:YES];
 }
 @end

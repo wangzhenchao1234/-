@@ -30,6 +30,11 @@
 		70DA0D4C1B6085D500DD59F1 /* XMGRecommendUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 70DA0D4A1B6085D500DD59F1 /* XMGRecommendUserCell.m */; };
 		70DA0D4D1B6085D500DD59F1 /* XMGRecommendUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70DA0D4B1B6085D500DD59F1 /* XMGRecommendUserCell.xib */; };
 		70DA0D501B6087A900DD59F1 /* XMGRecommendUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 70DA0D4F1B6087A900DD59F1 /* XMGRecommendUser.m */; };
+		70DA0D531B60D67C00DD59F1 /* XMGRecommendTagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70DA0D521B60D67C00DD59F1 /* XMGRecommendTagsViewController.m */; };
+		70DA0D561B60D7DC00DD59F1 /* XMGRecommendTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 70DA0D551B60D7DC00DD59F1 /* XMGRecommendTag.m */; };
+		70DA0D5A1B60D87E00DD59F1 /* XMGRecommendTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 70DA0D581B60D87E00DD59F1 /* XMGRecommendTagCell.m */; };
+		70DA0D5B1B60D87E00DD59F1 /* XMGRecommendTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70DA0D591B60D87E00DD59F1 /* XMGRecommendTagCell.xib */; };
+		70DA0D5E1B60DED100DD59F1 /* XMGTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 70DA0D5D1B60DED100DD59F1 /* XMGTestView.m */; };
 		DA9E81567E8AC4629608A735 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E96429885DFBC9344ACBB0 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +93,15 @@
 		70DA0D4B1B6085D500DD59F1 /* XMGRecommendUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGRecommendUserCell.xib; sourceTree = "<group>"; };
 		70DA0D4E1B6087A900DD59F1 /* XMGRecommendUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGRecommendUser.h; sourceTree = "<group>"; };
 		70DA0D4F1B6087A900DD59F1 /* XMGRecommendUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGRecommendUser.m; sourceTree = "<group>"; };
+		70DA0D511B60D67C00DD59F1 /* XMGRecommendTagsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGRecommendTagsViewController.h; sourceTree = "<group>"; };
+		70DA0D521B60D67C00DD59F1 /* XMGRecommendTagsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGRecommendTagsViewController.m; sourceTree = "<group>"; };
+		70DA0D541B60D7DC00DD59F1 /* XMGRecommendTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGRecommendTag.h; sourceTree = "<group>"; };
+		70DA0D551B60D7DC00DD59F1 /* XMGRecommendTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGRecommendTag.m; sourceTree = "<group>"; };
+		70DA0D571B60D87E00DD59F1 /* XMGRecommendTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGRecommendTagCell.h; sourceTree = "<group>"; };
+		70DA0D581B60D87E00DD59F1 /* XMGRecommendTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGRecommendTagCell.m; sourceTree = "<group>"; };
+		70DA0D591B60D87E00DD59F1 /* XMGRecommendTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGRecommendTagCell.xib; sourceTree = "<group>"; };
+		70DA0D5C1B60DED100DD59F1 /* XMGTestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTestView.h; sourceTree = "<group>"; };
+		70DA0D5D1B60DED100DD59F1 /* XMGTestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTestView.m; sourceTree = "<group>"; };
 		97E96429885DFBC9344ACBB0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ED90CEC200918F803FF50AF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -202,6 +216,8 @@
 			children = (
 				70B5CB9A1B5F7EEF00E1C3EA /* XMGEssenceViewController.h */,
 				70B5CB9B1B5F7EEF00E1C3EA /* XMGEssenceViewController.m */,
+				70DA0D511B60D67C00DD59F1 /* XMGRecommendTagsViewController.h */,
+				70DA0D521B60D67C00DD59F1 /* XMGRecommendTagsViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -209,6 +225,8 @@
 		70B5CB9C1B5F7EEF00E1C3EA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				70DA0D541B60D7DC00DD59F1 /* XMGRecommendTag.h */,
+				70DA0D551B60D7DC00DD59F1 /* XMGRecommendTag.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -216,6 +234,11 @@
 		70B5CB9D1B5F7EEF00E1C3EA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				70DA0D571B60D87E00DD59F1 /* XMGRecommendTagCell.h */,
+				70DA0D581B60D87E00DD59F1 /* XMGRecommendTagCell.m */,
+				70DA0D591B60D87E00DD59F1 /* XMGRecommendTagCell.xib */,
+				70DA0D5C1B60DED100DD59F1 /* XMGTestView.h */,
+				70DA0D5D1B60DED100DD59F1 /* XMGTestView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -472,6 +495,7 @@
 			files = (
 				70DA0D4D1B6085D500DD59F1 /* XMGRecommendUserCell.xib in Resources */,
 				70B5CBE01B5F998300E1C3EA /* XMGRecommendViewController.xib in Resources */,
+				70DA0D5B1B60D87E00DD59F1 /* XMGRecommendTagCell.xib in Resources */,
 				70DA0D451B60775600DD59F1 /* XMGRecommendCategoryCell.xib in Resources */,
 				70B5CB631B5F27D200E1C3EA /* Images.xcassets in Resources */,
 				70B5CBD11B5F942F00E1C3EA /* XMGFriendTrendsViewController.xib in Resources */,
@@ -527,11 +551,15 @@
 			files = (
 				70DA0D501B6087A900DD59F1 /* XMGRecommendUser.m in Sources */,
 				70B5CBDF1B5F998300E1C3EA /* XMGRecommendViewController.m in Sources */,
+				70DA0D531B60D67C00DD59F1 /* XMGRecommendTagsViewController.m in Sources */,
 				70DA0D401B60760600DD59F1 /* XMGRecommendCategory.m in Sources */,
 				70B5CBCF1B5F848E00E1C3EA /* XMGNavigationController.m in Sources */,
 				70B5CBC91B5F7EEF00E1C3EA /* XMGTabBar.m in Sources */,
+				70DA0D5A1B60D87E00DD59F1 /* XMGRecommendTagCell.m in Sources */,
+				70DA0D5E1B60DED100DD59F1 /* XMGTestView.m in Sources */,
 				70B5CBC21B5F7EEF00E1C3EA /* XMGMeViewController.m in Sources */,
 				70DA0D441B60775600DD59F1 /* XMGRecommendCategoryCell.m in Sources */,
+				70DA0D561B60D7DC00DD59F1 /* XMGRecommendTag.m in Sources */,
 				70DA0D4C1B6085D500DD59F1 /* XMGRecommendUserCell.m in Sources */,
 				70B5CBC01B5F7EEF00E1C3EA /* XMGEssenceViewController.m in Sources */,
 				70B5CBC31B5F7EEF00E1C3EA /* XMGNewViewController.m in Sources */,
