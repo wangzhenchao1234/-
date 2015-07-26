@@ -10,6 +10,7 @@
 		7069885A1B646ACA00DA90AA /* XMGLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 706988581B646ACA00DA90AA /* XMGLoginRegisterViewController.m */; };
 		7069885B1B646ACA00DA90AA /* XMGLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 706988591B646ACA00DA90AA /* XMGLoginRegisterViewController.xib */; };
 		7069885E1B6470FF00DA90AA /* XMGVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7069885D1B6470FF00DA90AA /* XMGVerticalButton.m */; };
+		706988611B647F7F00DA90AA /* XMGTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 706988601B647F7F00DA90AA /* XMGTextField.m */; };
 		70B5CB631B5F27D200E1C3EA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70B5CB621B5F27D200E1C3EA /* Images.xcassets */; };
 		70B5CB721B5F27D200E1C3EA /* _1______Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B5CB711B5F27D200E1C3EA /* _1______Tests.m */; };
 		70B5CBC01B5F7EEF00E1C3EA /* XMGEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B5CB9B1B5F7EEF00E1C3EA /* XMGEssenceViewController.m */; };
@@ -58,6 +59,8 @@
 		706988591B646ACA00DA90AA /* XMGLoginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGLoginRegisterViewController.xib; sourceTree = "<group>"; };
 		7069885C1B6470FF00DA90AA /* XMGVerticalButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGVerticalButton.h; sourceTree = "<group>"; };
 		7069885D1B6470FF00DA90AA /* XMGVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGVerticalButton.m; sourceTree = "<group>"; };
+		7069885F1B647F7F00DA90AA /* XMGTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTextField.h; sourceTree = "<group>"; };
+		706988601B647F7F00DA90AA /* XMGTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTextField.m; sourceTree = "<group>"; };
 		70B5CB521B5F27D200E1C3EA /* 01-百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "01-百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70B5CB561B5F27D200E1C3EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70B5CB621B5F27D200E1C3EA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -299,6 +302,8 @@
 				70DA0D4B1B6085D500DD59F1 /* XMGRecommendUserCell.xib */,
 				7069885C1B6470FF00DA90AA /* XMGVerticalButton.h */,
 				7069885D1B6470FF00DA90AA /* XMGVerticalButton.m */,
+				7069885F1B647F7F00DA90AA /* XMGTextField.h */,
+				706988601B647F7F00DA90AA /* XMGTextField.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -585,6 +590,7 @@
 				70B5CBC41B5F7EEF00E1C3EA /* AppDelegate.m in Sources */,
 				70B5CBE21B5F9A8100E1C3EA /* Foundation+Log.m in Sources */,
 				70B5CBC81B5F7EEF00E1C3EA /* main.m in Sources */,
+				706988611B647F7F00DA90AA /* XMGTextField.m in Sources */,
 				70B5CBC51B5F7EEF00E1C3EA /* UIBarButtonItem+XMGExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
