@@ -18,6 +18,7 @@
 		7069886F1B64D60B00DA90AA /* XMGVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7069886E1B64D60B00DA90AA /* XMGVoiceViewController.m */; };
 		706988721B64D61900DA90AA /* XMGPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 706988711B64D61900DA90AA /* XMGPictureViewController.m */; };
 		706988751B64D62400DA90AA /* XMGWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 706988741B64D62400DA90AA /* XMGWordViewController.m */; };
+		706988781B65BB6500DA90AA /* XMGTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 706988771B65BB6500DA90AA /* XMGTopic.m */; };
 		70B5CB631B5F27D200E1C3EA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70B5CB621B5F27D200E1C3EA /* Images.xcassets */; };
 		70B5CB721B5F27D200E1C3EA /* _1______Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B5CB711B5F27D200E1C3EA /* _1______Tests.m */; };
 		70B5CBC01B5F7EEF00E1C3EA /* XMGEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B5CB9B1B5F7EEF00E1C3EA /* XMGEssenceViewController.m */; };
@@ -80,6 +81,8 @@
 		706988711B64D61900DA90AA /* XMGPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPictureViewController.m; sourceTree = "<group>"; };
 		706988731B64D62400DA90AA /* XMGWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGWordViewController.h; sourceTree = "<group>"; };
 		706988741B64D62400DA90AA /* XMGWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGWordViewController.m; sourceTree = "<group>"; };
+		706988761B65BB6500DA90AA /* XMGTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTopic.h; sourceTree = "<group>"; };
+		706988771B65BB6500DA90AA /* XMGTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTopic.m; sourceTree = "<group>"; };
 		70B5CB521B5F27D200E1C3EA /* 01-百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "01-百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70B5CB561B5F27D200E1C3EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70B5CB621B5F27D200E1C3EA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -265,6 +268,8 @@
 			children = (
 				70DA0D541B60D7DC00DD59F1 /* XMGRecommendTag.h */,
 				70DA0D551B60D7DC00DD59F1 /* XMGRecommendTag.m */,
+				706988761B65BB6500DA90AA /* XMGTopic.h */,
+				706988771B65BB6500DA90AA /* XMGTopic.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -603,6 +608,7 @@
 				70DA0D531B60D67C00DD59F1 /* XMGRecommendTagsViewController.m in Sources */,
 				70DA0D401B60760600DD59F1 /* XMGRecommendCategory.m in Sources */,
 				706988641B64B88C00DA90AA /* XMGPushGuideView.m in Sources */,
+				706988781B65BB6500DA90AA /* XMGTopic.m in Sources */,
 				70B5CBCF1B5F848E00E1C3EA /* XMGNavigationController.m in Sources */,
 				70B5CBC91B5F7EEF00E1C3EA /* XMGTabBar.m in Sources */,
 				70DA0D5A1B60D87E00DD59F1 /* XMGRecommendTagCell.m in Sources */,
