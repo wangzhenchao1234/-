@@ -49,20 +49,25 @@
  */
 - (void)setupChildVces
 {
+    XMGWordViewController *word = [[XMGWordViewController alloc] init];
+    word.title = @"段子";
+    [self addChildViewController:word];
+    
     XMGAllViewController *all = [[XMGAllViewController alloc] init];
+    all.title = @"全部";
     [self addChildViewController:all];
     
+    XMGPictureViewController *picture = [[XMGPictureViewController alloc] init];
+    picture.title = @"图片";
+    [self addChildViewController:picture];
+    
     XMGVideoViewController *video = [[XMGVideoViewController alloc] init];
+    video.title = @"视频";
     [self addChildViewController:video];
     
     XMGVoiceViewController *voice = [[XMGVoiceViewController alloc] init];
+    voice.title = @"声音";
     [self addChildViewController:voice];
-    
-    XMGPictureViewController *picture = [[XMGPictureViewController alloc] init];
-    [self addChildViewController:picture];
-    
-    XMGWordViewController *word = [[XMGWordViewController alloc] init];
-    [self addChildViewController:word];
 }
 
 /**
@@ -88,16 +93,16 @@
     self.indicatorView = indicatorView;
     
     // 内部的子标签
-    NSArray *titles = @[@"全部", @"视频", @"声音", @"图片", @"段子"];
-    CGFloat width = titlesView.width / titles.count;
+    CGFloat width = titlesView.width / self.childViewControllers.count;
     CGFloat height = titlesView.height;
-    for (NSInteger i = 0; i<titles.count; i++) {
+    for (NSInteger i = 0; i<self.childViewControllers.count; i++) {
         UIButton *button = [[UIButton alloc] init];
         button.tag = i;
         button.height = height;
         button.width = width;
         button.x = i * width;
-        [button setTitle:titles[i] forState:UIControlStateNormal];
+        UIViewController *vc = self.childViewControllers[i];
+        [button setTitle:vc.title forState:UIControlStateNormal];
 //        [button layoutIfNeeded]; // 强制布局(强制更新子控件的frame)
         [button setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
         [button setTitleColor:[UIColor redColor] forState:UIControlStateDisabled];
