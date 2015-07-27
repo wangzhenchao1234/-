@@ -51,18 +51,60 @@
     [self setupButtonTitle:self.caiButton count:topic.cai placeholder:@"踩"];
     [self setupButtonTitle:self.shareButton count:topic.repost placeholder:@"分享"];
     [self setupButtonTitle:self.commentButton count:topic.comment placeholder:@"评论"];
+    
+//    [self testDate:topic.create_time];
 }
 
+- (void)testDate:(NSString *)create_time
+{
+    // 日期格式化类
+    NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
+    // 设置日期格式(y:年,M:月,d:日,H:时,m:分,s:秒)
+    fmt.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+    
+    // 当前时间
+    NSDate *now = [NSDate date];
+    // 发帖时间
+    NSDate *create = [fmt dateFromString:create_time];
+    
+    XMGLog(@"%@", [now deltaFrom:create]);
+    
+//    // 日历
+//    NSCalendar *calendar = [NSCalendar currentCalendar];
+//    
+//    // 比较时间
+//    NSCalendarUnit unit = NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
+//    NSDateComponents *cmps = [calendar components:unit fromDate:create toDate:now options:0];
+//    
+//    XMGLog(@"%@ %@", create, now);
+//    XMGLog(@"%zd %zd %zd %zd %zd %zd", cmps.year, cmps.month, cmps.day, cmps.hour, cmps.minute, cmps.second);
+    
+    // 获得NSDate的每一个元素
+//    NSInteger year = [calendar component:NSCalendarUnitYear fromDate:now];
+//    NSInteger month = [calendar component:NSCalendarUnitMonth fromDate:now];
+//    NSInteger day = [calendar component:NSCalendarUnitDay fromDate:now];
+//    NSDateComponents *cmps = [calendar components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:now];
+//    XMGLog(@"%zd %zd %zd", cmps.year, cmps.month, cmps.day);
+}
+
+//- (void)testDate:(NSString *)create_time
+//{
+//    // 当前时间
+//    NSDate *now = [NSDate date];
+//    
+//    // 发帖时间
+//    NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
+//    // 设置日期格式(y:年,M:月,d:日,H:时,m:分,s:秒)
+//    fmt.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+//    NSDate *create = [fmt dateFromString:create_time];
+//    NSTimeInterval delta = [now timeIntervalSinceDate:create];
+//}
+
+/**
+ * 设置底部按钮文字
+ */
 - (void)setupButtonTitle:(UIButton *)button count:(NSInteger)count placeholder:(NSString *)placeholder
 {
-//    NSString *title = nil;
-//    if (count == 0) {
-//        title = placeholder;
-//    } else if (count > 10000) {
-//        title = [NSString stringWithFormat:@"%.1f万", count / 10000.0];
-//    } else {
-//        title = [NSString stringWithFormat:@"%zd", count];
-//    }
     if (count > 10000) {
         placeholder = [NSString stringWithFormat:@"%.1f万", count / 10000.0];
     } else if (count > 0) {
@@ -82,4 +124,5 @@
     
     [super setFrame:frame];
 }
+
 @end

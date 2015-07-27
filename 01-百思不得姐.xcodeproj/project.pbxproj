@@ -22,6 +22,7 @@
 		7069887B1B65C81000DA90AA /* XMGConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 7069887A1B65C81000DA90AA /* XMGConst.m */; };
 		7069887F1B65CAAB00DA90AA /* XMGTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7069887D1B65CAAB00DA90AA /* XMGTopicCell.m */; };
 		706988801B65CAAB00DA90AA /* XMGTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7069887E1B65CAAB00DA90AA /* XMGTopicCell.xib */; };
+		706988831B65DE0E00DA90AA /* NSDate+XMGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 706988821B65DE0E00DA90AA /* NSDate+XMGExtension.m */; };
 		70B5CB631B5F27D200E1C3EA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70B5CB621B5F27D200E1C3EA /* Images.xcassets */; };
 		70B5CB721B5F27D200E1C3EA /* _1______Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B5CB711B5F27D200E1C3EA /* _1______Tests.m */; };
 		70B5CBC01B5F7EEF00E1C3EA /* XMGEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B5CB9B1B5F7EEF00E1C3EA /* XMGEssenceViewController.m */; };
@@ -91,6 +92,8 @@
 		7069887C1B65CAAB00DA90AA /* XMGTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTopicCell.h; sourceTree = "<group>"; };
 		7069887D1B65CAAB00DA90AA /* XMGTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTopicCell.m; sourceTree = "<group>"; };
 		7069887E1B65CAAB00DA90AA /* XMGTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGTopicCell.xib; sourceTree = "<group>"; };
+		706988811B65DE0E00DA90AA /* NSDate+XMGExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+XMGExtension.h"; sourceTree = "<group>"; };
+		706988821B65DE0E00DA90AA /* NSDate+XMGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+XMGExtension.m"; sourceTree = "<group>"; };
 		70B5CB521B5F27D200E1C3EA /* 01-百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "01-百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70B5CB561B5F27D200E1C3EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70B5CB621B5F27D200E1C3EA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -439,6 +442,8 @@
 				70B5CBB51B5F7EEF00E1C3EA /* UIBarButtonItem+XMGExtension.m */,
 				70B5CBB61B5F7EEF00E1C3EA /* UIView+XMGExtension.h */,
 				70B5CBB71B5F7EEF00E1C3EA /* UIView+XMGExtension.m */,
+				706988811B65DE0E00DA90AA /* NSDate+XMGExtension.h */,
+				706988821B65DE0E00DA90AA /* NSDate+XMGExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -624,6 +629,7 @@
 				70DA0D401B60760600DD59F1 /* XMGRecommendCategory.m in Sources */,
 				706988641B64B88C00DA90AA /* XMGPushGuideView.m in Sources */,
 				706988781B65BB6500DA90AA /* XMGTopic.m in Sources */,
+				706988831B65DE0E00DA90AA /* NSDate+XMGExtension.m in Sources */,
 				70B5CBCF1B5F848E00E1C3EA /* XMGNavigationController.m in Sources */,
 				70B5CBC91B5F7EEF00E1C3EA /* XMGTabBar.m in Sources */,
 				70DA0D5A1B60D87E00DD59F1 /* XMGRecommendTagCell.m in Sources */,
