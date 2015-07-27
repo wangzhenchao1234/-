@@ -37,8 +37,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // 初始化表格
+    [self setupTableView];
+    
     // 添加刷新控件
     [self setupRefresh];
+}
+
+- (void)setupTableView
+{
+    // 设置内边距
+    CGFloat bottom = self.tabBarController.tabBar.height;
+    CGFloat top = XMGTitilesViewY + XMGTitilesViewH;
+    self.tableView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0);
+    // 设置滚动条的内边距
+    self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
 }
 
 - (void)setupRefresh
@@ -48,7 +61,7 @@
     self.tableView.header.autoChangeAlpha = YES;
     [self.tableView.header beginRefreshing];
     
-    self.tableView.footer = [MJRefreshBackNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreTopics)];
+    self.tableView.footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreTopics)];
 }
 
 #pragma mark - 数据处理
@@ -103,18 +116,16 @@
  */
 - (void)loadMoreTopics
 {
-    return;
     // 结束下拉
     [self.tableView.header endRefreshing];
-    
-    self.page++;
     
     // 参数
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"data";
     params[@"type"] = @"29";
-    params[@"page"] = @(self.page);
+    NSInteger page = self.page + 1;
+    params[@"page"] = @(page);
     params[@"maxtime"] = self.maxtime;
     self.params = params;
     
@@ -134,19 +145,20 @@
         
         // 结束刷新
         [self.tableView.footer endRefreshing];
+        
+        // 设置页码
+        self.page = page;
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         if (self.params != params) return;
         
         // 结束刷新
         [self.tableView.footer endRefreshing];
-        
-        // 恢复页码
-        self.page--;
     }];
 }
 
 #pragma mark - Table view data source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    self.tableView.footer.hidden = (self.topics.count == 0);
     return self.topics.count;
 }
 
