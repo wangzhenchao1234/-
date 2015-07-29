@@ -29,7 +29,7 @@
     [self.window makeKeyAndVisible];
     
     // 显示推送引导
-    [XMGPushGuideView show];
+//    [XMGPushGuideView show];
     return YES;
 }
 
