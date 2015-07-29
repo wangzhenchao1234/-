@@ -187,7 +187,7 @@
                 <outlet property="sinaVView" destination="SIX-EA-7jh" id="bRf-jr-lyc"/>
                 <outlet property="text_label" destination="u8q-eO-aO9" id="gxh-s0-hul"/>
             </connections>
-            <point key="canvasLocation" x="282" y="319.5"/>
+            <point key="canvasLocation" x="341" y="312.5"/>
         </tableViewCell>
     </objects>
     <resources>
