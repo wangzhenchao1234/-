@@ -1,12 +1,12 @@
 //
-//  XMGWordViewController.m
+//  XMGTopicViewController.m
 //  01-百思不得姐
 //
 //  Created by xiaomage on 15/7/26.
 //  Copyright (c) 2015年 小码哥. All rights reserved.
 //
 
-#import "XMGWordViewController.h"
+#import "XMGTopicViewController.h"
 #import <AFNetworking.h>
 #import <UIImageView+WebCache.h>
 #import "XMGTopic.h"
@@ -14,7 +14,7 @@
 #import <MJRefresh.h>
 #import "XMGTopicCell.h"
 
-@interface XMGWordViewController ()
+@interface XMGTopicViewController ()
 /** 帖子数据 */
 @property (nonatomic, strong) NSMutableArray *topics;
 /** 当前页码 */
@@ -25,8 +25,7 @@
 @property (nonatomic, strong) NSDictionary *params;
 @end
 
-@implementation XMGWordViewController
-
+@implementation XMGTopicViewController
 - (NSMutableArray *)topics
 {
     if (!_topics) {
@@ -85,7 +84,7 @@ static NSString * const XMGTopicCellId = @"topic";
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"data";
-    params[@"type"] = @"29";
+    params[@"type"] = @(self.type);
     self.params = params;
     
     // 发送请求
@@ -131,7 +130,7 @@ static NSString * const XMGTopicCellId = @"topic";
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"data";
-    params[@"type"] = @"29";
+    params[@"type"] = @(self.type);
     NSInteger page = self.page + 1;
     params[@"page"] = @(page);
     params[@"maxtime"] = self.maxtime;
@@ -181,7 +180,18 @@ static NSString * const XMGTopicCellId = @"topic";
 #pragma mark - 代理方法
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 200;
+    // 取出帖子模型
+    XMGTopic *topic = self.topics[indexPath.row];
+    
+    // 文字的最大尺寸
+    CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 4 * XMGTopicCellMargin, MAXFLOAT);
+//    CGFloat textH = [topic.text sizeWithFont:[UIFont systemFontOfSize:14] constrainedToSize:maxSize].height;
+    CGFloat textH = [topic.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14]} context:nil].size.height;
+    
+    // cell的高度
+    CGFloat cellH = XMGTopicCellTextY + textH + XMGTopicCellBottomBarH + 2 * XMGTopicCellMargin;
+    
+    return cellH;
 }
 
 @end
