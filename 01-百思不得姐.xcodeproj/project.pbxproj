@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		704EF87E1B68B88B009D1F71 /* XMGShowPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 704EF87C1B68B88B009D1F71 /* XMGShowPictureViewController.m */; };
+		704EF87F1B68B88B009D1F71 /* XMGShowPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 704EF87D1B68B88B009D1F71 /* XMGShowPictureViewController.xib */; };
+		704EF8851B68BE52009D1F71 /* XMGProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 704EF8841B68BE52009D1F71 /* XMGProgressView.m */; };
 		7069885A1B646ACA00DA90AA /* XMGLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 706988581B646ACA00DA90AA /* XMGLoginRegisterViewController.m */; };
 		7069885B1B646ACA00DA90AA /* XMGLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 706988591B646ACA00DA90AA /* XMGLoginRegisterViewController.xib */; };
 		7069885E1B6470FF00DA90AA /* XMGVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7069885D1B6470FF00DA90AA /* XMGVerticalButton.m */; };
@@ -64,6 +67,11 @@
 
 /* Begin PBXFileReference section */
 		1F4AC0CDDAD2434541620CAF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		704EF87B1B68B88B009D1F71 /* XMGShowPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGShowPictureViewController.h; sourceTree = "<group>"; };
+		704EF87C1B68B88B009D1F71 /* XMGShowPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGShowPictureViewController.m; sourceTree = "<group>"; };
+		704EF87D1B68B88B009D1F71 /* XMGShowPictureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGShowPictureViewController.xib; sourceTree = "<group>"; };
+		704EF8831B68BE52009D1F71 /* XMGProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGProgressView.h; sourceTree = "<group>"; };
+		704EF8841B68BE52009D1F71 /* XMGProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGProgressView.m; sourceTree = "<group>"; };
 		706988571B646ACA00DA90AA /* XMGLoginRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGLoginRegisterViewController.h; sourceTree = "<group>"; };
 		706988581B646ACA00DA90AA /* XMGLoginRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGLoginRegisterViewController.m; sourceTree = "<group>"; };
 		706988591B646ACA00DA90AA /* XMGLoginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGLoginRegisterViewController.xib; sourceTree = "<group>"; };
@@ -258,6 +266,9 @@
 				70DA0D521B60D67C00DD59F1 /* XMGRecommendTagsViewController.m */,
 				706988841B66107400DA90AA /* XMGTopicViewController.h */,
 				706988851B66107400DA90AA /* XMGTopicViewController.m */,
+				704EF87B1B68B88B009D1F71 /* XMGShowPictureViewController.h */,
+				704EF87C1B68B88B009D1F71 /* XMGShowPictureViewController.m */,
+				704EF87D1B68B88B009D1F71 /* XMGShowPictureViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -285,6 +296,8 @@
 				7069888A1B68756E00DA90AA /* XMGTopicPictureView.h */,
 				7069888B1B68756E00DA90AA /* XMGTopicPictureView.m */,
 				7069888D1B68758C00DA90AA /* XMGTopicPictureView.xib */,
+				704EF8831B68BE52009D1F71 /* XMGProgressView.h */,
+				704EF8841B68BE52009D1F71 /* XMGProgressView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -565,6 +578,7 @@
 				70B5CB631B5F27D200E1C3EA /* Images.xcassets in Resources */,
 				70B5CBD11B5F942F00E1C3EA /* XMGFriendTrendsViewController.xib in Resources */,
 				706988801B65CAAB00DA90AA /* XMGTopicCell.xib in Resources */,
+				704EF87F1B68B88B009D1F71 /* XMGShowPictureViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -616,6 +630,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7069888C1B68756E00DA90AA /* XMGTopicPictureView.m in Sources */,
+				704EF87E1B68B88B009D1F71 /* XMGShowPictureViewController.m in Sources */,
 				70DA0D501B6087A900DD59F1 /* XMGRecommendUser.m in Sources */,
 				70B5CBDF1B5F998300E1C3EA /* XMGRecommendViewController.m in Sources */,
 				7069885A1B646ACA00DA90AA /* XMGLoginRegisterViewController.m in Sources */,
@@ -637,6 +652,7 @@
 				70B5CBC01B5F7EEF00E1C3EA /* XMGEssenceViewController.m in Sources */,
 				70B5CBC31B5F7EEF00E1C3EA /* XMGNewViewController.m in Sources */,
 				70B5CBC61B5F7EEF00E1C3EA /* UIView+XMGExtension.m in Sources */,
+				704EF8851B68BE52009D1F71 /* XMGProgressView.m in Sources */,
 				7069887F1B65CAAB00DA90AA /* XMGTopicCell.m in Sources */,
 				7069885E1B6470FF00DA90AA /* XMGVerticalButton.m in Sources */,
 				70B5CBC71B5F7EEF00E1C3EA /* XMGTabBarController.m in Sources */,
