@@ -8,7 +8,16 @@
 
 #import "XMGTopic.h"
 
+//@interface XMGTopic()
+//{
+//    CGFloat _cellHeight;
+//}
+//@end
+
 @implementation XMGTopic
+{
+    CGFloat _cellHeight;
+}
 
 - (NSString *)create_time
 {
@@ -40,6 +49,20 @@
     } else { // 非今年
         return _create_time;
     }
+}
+
+- (CGFloat)cellHeight
+{
+    if (!_cellHeight) {
+        // 文字的最大尺寸
+        CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 4 * XMGTopicCellMargin, MAXFLOAT);
+        // 计算文字的高度
+        CGFloat textH = [self.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14]} context:nil].size.height;
+        
+        // cell的高度
+        _cellHeight = XMGTopicCellTextY + textH + XMGTopicCellBottomBarH + 2 * XMGTopicCellMargin;
+    }
+    return _cellHeight;
 }
 
 @end
