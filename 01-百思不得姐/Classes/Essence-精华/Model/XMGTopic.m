@@ -7,16 +7,21 @@
 //
 
 #import "XMGTopic.h"
-
-//@interface XMGTopic()
-//{
-//    CGFloat _cellHeight;
-//}
-//@end
+#import <MJExtension.h>
 
 @implementation XMGTopic
 {
     CGFloat _cellHeight;
+    CGRect _pictureF;
+}
+
++ (NSDictionary *)replacedKeyFromPropertyName
+{
+    return @{
+             @"small_image" : @"image0",
+             @"large_image" : @"image1",
+             @"middle_image" : @"image2"
+             };
 }
 
 - (NSString *)create_time
@@ -60,7 +65,28 @@
         CGFloat textH = [self.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14]} context:nil].size.height;
         
         // cell的高度
-        _cellHeight = XMGTopicCellTextY + textH + XMGTopicCellBottomBarH + 2 * XMGTopicCellMargin;
+        // 文字部分的高度
+        _cellHeight = XMGTopicCellTextY + textH + XMGTopicCellMargin;
+        
+        // 根据段子的类型来计算cell的高度
+        if (self.type == XMGTopicTypePicture) { // 图片帖子
+            // 图片显示出来的宽度
+            CGFloat pictureW = maxSize.width;
+            // 显示显示出来的高度
+            CGFloat pictureH = pictureW * self.height / self.width;
+            
+            // 计算图片控件的frame
+            CGFloat pictureX = XMGTopicCellMargin;
+            CGFloat pictureY = XMGTopicCellTextY + textH + XMGTopicCellMargin;
+            _pictureF = CGRectMake(pictureX, pictureY, pictureW, pictureH);
+            
+            _cellHeight += pictureH + XMGTopicCellMargin;
+        } else if (self.type == XMGTopicTypeVoice) { // 声音帖子
+        
+        }
+        
+        // 底部工具条的高度
+        _cellHeight += XMGTopicCellBottomBarH + XMGTopicCellMargin;
     }
     return _cellHeight;
 }

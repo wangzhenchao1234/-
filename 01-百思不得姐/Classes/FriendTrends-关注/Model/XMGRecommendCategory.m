@@ -7,8 +7,22 @@
 //
 
 #import "XMGRecommendCategory.h"
+#import <MJExtension.h>
 
 @implementation XMGRecommendCategory
++ (NSDictionary *)replacedKeyFromPropertyName
+{
+    return @{@"ID" : @"id"};
+}
+
+//+ (NSString *)replacedKeyFromPropertyName121:(NSString *)propertyName
+//{
+//    // propertyName == myName == myHeight
+//    if ([propertyName isEqualToString:@"ID"]) return @"id";
+//    
+//    return propertyName;
+//}
+
 - (NSMutableArray *)users
 {
     if (!_users) {

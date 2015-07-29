@@ -1,6 +1,14 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum {
+    XMGTopicTypeAll = 1,
+    XMGTopicTypePicture = 10,
+    XMGTopicTypeWord = 29,
+    XMGTopicTypeVoice = 31,
+    XMGTopicTypeVideo = 41
+} XMGTopicType;
+
 /** 精华-顶部标题的高度 */
 UIKIT_EXTERN CGFloat const XMGTitilesViewH;
 /** 精华-顶部标题的Y */

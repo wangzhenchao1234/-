@@ -9,6 +9,7 @@
 #import "XMGTopicCell.h"
 #import "XMGTopic.h"
 #import <UIImageView+WebCache.h>
+#import "XMGTopicPictureView.h"
 
 @interface XMGTopicCell()
 /** 头像 */
@@ -29,9 +30,21 @@
 @property (weak, nonatomic) IBOutlet UIImageView *sinaVView;
 /** 帖子的文字内容 */
 @property (weak, nonatomic) IBOutlet UILabel *text_label;
+/** 图片帖子中间的内容 */
+@property (nonatomic, weak) XMGTopicPictureView *pictureView;
 @end
 
 @implementation XMGTopicCell
+
+- (XMGTopicPictureView *)pictureView
+{
+    if (!_pictureView) {
+        XMGTopicPictureView *pictureView = [XMGTopicPictureView pictureView];
+        [self.contentView addSubview:pictureView];
+        _pictureView = pictureView;
+    }
+    return _pictureView;
+}
 
 - (void)awakeFromNib
 {
@@ -64,6 +77,15 @@
     
     // 设置帖子的文字内容
     self.text_label.text = topic.text;
+    
+    // 根据模型类型(帖子类型)添加对应的内容到cell的中间
+    if (topic.type == XMGTopicTypePicture) { // 图片帖子
+        self.pictureView.topic = topic;
+        self.pictureView.frame = topic.pictureF;
+    } else if (topic.type == XMGTopicTypeVoice) { // 声音帖子
+//        self.voiceView.topic = topic;
+//        self.voiceView.frame = topic.voiceF;
+    }
 }
 
 /**

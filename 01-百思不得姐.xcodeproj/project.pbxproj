@@ -19,6 +19,9 @@
 		706988801B65CAAB00DA90AA /* XMGTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7069887E1B65CAAB00DA90AA /* XMGTopicCell.xib */; };
 		706988831B65DE0E00DA90AA /* NSDate+XMGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 706988821B65DE0E00DA90AA /* NSDate+XMGExtension.m */; };
 		706988861B66107400DA90AA /* XMGTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 706988851B66107400DA90AA /* XMGTopicViewController.m */; };
+		706988891B686CA400DA90AA /* XMGExtensionConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 706988881B686CA400DA90AA /* XMGExtensionConfig.m */; };
+		7069888C1B68756E00DA90AA /* XMGTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7069888B1B68756E00DA90AA /* XMGTopicPictureView.m */; };
+		7069888E1B68758C00DA90AA /* XMGTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7069888D1B68758C00DA90AA /* XMGTopicPictureView.xib */; };
 		70B5CB631B5F27D200E1C3EA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70B5CB621B5F27D200E1C3EA /* Images.xcassets */; };
 		70B5CB721B5F27D200E1C3EA /* _1______Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B5CB711B5F27D200E1C3EA /* _1______Tests.m */; };
 		70B5CBC01B5F7EEF00E1C3EA /* XMGEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B5CB9B1B5F7EEF00E1C3EA /* XMGEssenceViewController.m */; };
@@ -82,6 +85,11 @@
 		706988821B65DE0E00DA90AA /* NSDate+XMGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+XMGExtension.m"; sourceTree = "<group>"; };
 		706988841B66107400DA90AA /* XMGTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTopicViewController.h; sourceTree = "<group>"; };
 		706988851B66107400DA90AA /* XMGTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTopicViewController.m; sourceTree = "<group>"; };
+		706988871B686CA400DA90AA /* XMGExtensionConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGExtensionConfig.h; sourceTree = "<group>"; };
+		706988881B686CA400DA90AA /* XMGExtensionConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGExtensionConfig.m; sourceTree = "<group>"; };
+		7069888A1B68756E00DA90AA /* XMGTopicPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTopicPictureView.h; sourceTree = "<group>"; };
+		7069888B1B68756E00DA90AA /* XMGTopicPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTopicPictureView.m; sourceTree = "<group>"; };
+		7069888D1B68758C00DA90AA /* XMGTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGTopicPictureView.xib; sourceTree = "<group>"; };
 		70B5CB521B5F27D200E1C3EA /* 01-百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "01-百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70B5CB561B5F27D200E1C3EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70B5CB621B5F27D200E1C3EA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -274,6 +282,9 @@
 				7069887C1B65CAAB00DA90AA /* XMGTopicCell.h */,
 				7069887D1B65CAAB00DA90AA /* XMGTopicCell.m */,
 				7069887E1B65CAAB00DA90AA /* XMGTopicCell.xib */,
+				7069888A1B68756E00DA90AA /* XMGTopicPictureView.h */,
+				7069888B1B68756E00DA90AA /* XMGTopicPictureView.m */,
+				7069888D1B68758C00DA90AA /* XMGTopicPictureView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -411,6 +422,8 @@
 				70B5CBBC1B5F7EEF00E1C3EA /* PrefixHeader.pch */,
 				706988791B65C81000DA90AA /* XMGConst.h */,
 				7069887A1B65C81000DA90AA /* XMGConst.m */,
+				706988871B686CA400DA90AA /* XMGExtensionConfig.h */,
+				706988881B686CA400DA90AA /* XMGExtensionConfig.m */,
 			);
 			path = "Other-其他";
 			sourceTree = "<group>";
@@ -542,6 +555,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7069888E1B68758C00DA90AA /* XMGTopicPictureView.xib in Resources */,
 				70DA0D4D1B6085D500DD59F1 /* XMGRecommendUserCell.xib in Resources */,
 				70B5CBE01B5F998300E1C3EA /* XMGRecommendViewController.xib in Resources */,
 				706988661B64B89700DA90AA /* XMGPushGuideView.xib in Resources */,
@@ -601,6 +615,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7069888C1B68756E00DA90AA /* XMGTopicPictureView.m in Sources */,
 				70DA0D501B6087A900DD59F1 /* XMGRecommendUser.m in Sources */,
 				70B5CBDF1B5F998300E1C3EA /* XMGRecommendViewController.m in Sources */,
 				7069885A1B646ACA00DA90AA /* XMGLoginRegisterViewController.m in Sources */,
@@ -613,6 +628,7 @@
 				706988831B65DE0E00DA90AA /* NSDate+XMGExtension.m in Sources */,
 				70B5CBCF1B5F848E00E1C3EA /* XMGNavigationController.m in Sources */,
 				70B5CBC91B5F7EEF00E1C3EA /* XMGTabBar.m in Sources */,
+				706988891B686CA400DA90AA /* XMGExtensionConfig.m in Sources */,
 				70DA0D5A1B60D87E00DD59F1 /* XMGRecommendTagCell.m in Sources */,
 				70B5CBC21B5F7EEF00E1C3EA /* XMGMeViewController.m in Sources */,
 				70DA0D441B60775600DD59F1 /* XMGRecommendCategoryCell.m in Sources */,
