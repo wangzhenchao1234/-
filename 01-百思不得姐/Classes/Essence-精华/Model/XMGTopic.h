@@ -39,6 +39,10 @@
 @property (nonatomic, copy) NSString *large_image;
 /** 帖子的类型 */
 @property (nonatomic, assign) XMGTopicType type;
+/** 音频时长 */
+@property (nonatomic, assign) NSInteger voicetime;
+/** 播放次数 */
+@property (nonatomic, assign) NSInteger playcount;
 
 /****** 额外的辅助属性 ******/
 
@@ -48,7 +52,9 @@
 @property (nonatomic, assign, readonly) CGRect pictureF;
 /** 图片是否太大 */
 @property (nonatomic, assign, getter=isBigPicture) BOOL bigPicture;
-
 /** 图片的下载进度 */
 @property (nonatomic, assign) CGFloat pictureProgress;
+
+/** 声音控件的frame */
+@property (nonatomic, assign, readonly) CGRect voiceF;
 @end

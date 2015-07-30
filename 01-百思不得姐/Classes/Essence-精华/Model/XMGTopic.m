@@ -12,7 +12,6 @@
 @implementation XMGTopic
 {
     CGFloat _cellHeight;
-    CGRect _pictureF;
 }
 
 + (NSDictionary *)replacedKeyFromPropertyName
@@ -86,8 +85,14 @@
             
             _cellHeight += pictureH + XMGTopicCellMargin;
         } else if (self.type == XMGTopicTypeVoice) { // 声音帖子
-        
-        }
+            CGFloat voiceX = XMGTopicCellMargin;
+            CGFloat voiceY = XMGTopicCellTextY + textH + XMGTopicCellMargin;
+            CGFloat voiceW = maxSize.width;
+            CGFloat voiceH = voiceW * self.height / self.width;
+            _voiceF = CGRectMake(voiceX, voiceY, voiceW, voiceH);
+            
+            _cellHeight += voiceH + XMGTopicCellMargin;
+         }
         
         // 底部工具条的高度
         _cellHeight += XMGTopicCellBottomBarH + XMGTopicCellMargin;
