@@ -13,6 +13,7 @@
 #import <AFNetworking.h>
 #import "XMGComment.h"
 #import <MJExtension.h>
+#import "XMGCommentHeaderView.h"
 
 @interface XMGCommentViewController () <UITableViewDelegate, UITableViewDataSource>
 /** 工具条底部间距 */
@@ -23,6 +24,9 @@
 @property (nonatomic, strong) NSArray *hotComments;
 /** 最新评论 */
 @property (nonatomic, strong) NSMutableArray *latestComments;
+
+/** 保存帖子的top_cmt */
+@property (nonatomic, strong) NSArray *saved_top_cmt;
 @end
 
 @implementation XMGCommentViewController
@@ -71,6 +75,13 @@
     // 创建header
     UIView *header = [[UIView alloc] init];
     
+    // 清空top_cmt
+    if (self.topic.top_cmt.count) {
+        self.saved_top_cmt = self.topic.top_cmt;
+        self.topic.top_cmt = nil;
+        [self.topic setValue:@0 forKeyPath:@"cellHeight"];
+    }
+    
     // 添加cell
     XMGTopicCell *cell = [XMGTopicCell cell];
     cell.topic = self.topic;
@@ -111,6 +122,12 @@
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+    
+    // 恢复帖子的top_cmt
+    if (self.saved_top_cmt.count) {
+        self.topic.top_cmt = self.saved_top_cmt;
+        [self.topic setValue:@0 forKeyPath:@"cellHeight"];
+    }
 }
 
 /**
@@ -158,13 +175,85 @@
     return latestCount;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+//{
+//    NSInteger hotCount = self.hotComments.count;
+//    if (section == 0) {
+//        return hotCount ? @"最热评论" : @"最新评论";
+//    }
+//    return @"最新评论";
+//}
+//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+//{
+//    // 创建头部
+//    UIView *header = [[UIView alloc] init];
+//    header.backgroundColor = XMGGlobalBg;
+//    
+//    // 创建label
+//    UILabel *label = [[UILabel alloc] init];
+//    label.textColor = XMGRGBColor(67, 67, 67);
+//    label.width = 200;
+//    label.x = XMGTopicCellMargin;
+//    label.autoresizingMask = UIViewAutoresizingFlexibleHeight;
+//    [header addSubview:label];
+//    
+//    // 设置文字
+//    NSInteger hotCount = self.hotComments.count;
+//    if (section == 0) {
+//        label.text = hotCount ? @"最热评论" : @"最新评论";
+//    } else {
+//        label.text = @"最新评论";
+//    }
+//    
+//    return header;
+//}
+//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+//{
+//    static NSString *ID = @"header";
+//    // 先从缓存池中找header
+//    UITableViewHeaderFooterView *header = [tableView dequeueReusableHeaderFooterViewWithIdentifier:ID];
+//
+//    // 内部的一个label
+//    UILabel *label = nil;
+//    
+//    if (header == nil) { // 缓存池中没有, 自己创建
+//        header = [[UITableViewHeaderFooterView alloc] initWithReuseIdentifier:ID];
+//        header.contentView.backgroundColor = XMGGlobalBg;
+//        // 创建label
+//        label = [[UILabel alloc] init];
+//        label.textColor = XMGRGBColor(67, 67, 67);
+//        label.width = 200;
+//        label.x = XMGTopicCellMargin;
+//        label.autoresizingMask = UIViewAutoresizingFlexibleHeight;
+//        label.tag = XMGHeaderLabelTag;
+//        [header.contentView addSubview:label];
+//    } else { // 从缓存池中取出来的
+//        label = (UILabel *)[header viewWithTag:XMGHeaderLabelTag];
+//    }
+//    
+//    // 设置label的数据
+//    NSInteger hotCount = self.hotComments.count;
+//    if (section == 0) {
+//        label.text = hotCount ? @"最热评论" : @"最新评论";
+//    } else {
+//        label.text = @"最新评论";
+//    }
+//    
+//    return header;
+//}
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
+    // 先从缓存池中找header
+    XMGCommentHeaderView *header = [XMGCommentHeaderView headerViewWithTableView:tableView];
+    
+    // 设置label的数据
     NSInteger hotCount = self.hotComments.count;
     if (section == 0) {
-        return hotCount ? @"最热评论" : @"最新评论";
+        header.title = hotCount ? @"最热评论" : @"最新评论";
+    } else {
+        header.title = @"最新评论";
     }
-    return @"最新评论";
+    return header;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
