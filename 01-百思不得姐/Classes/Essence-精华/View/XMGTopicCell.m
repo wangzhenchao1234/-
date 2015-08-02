@@ -48,6 +48,11 @@
 
 @implementation XMGTopicCell
 
++ (instancetype)cell
+{
+    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] firstObject];
+}
+
 - (XMGTopicPictureView *)pictureView
 {
     if (!_pictureView) {
@@ -165,10 +170,15 @@
 {
     frame.origin.x = XMGTopicCellMargin;
     frame.size.width -= 2 * XMGTopicCellMargin;
-    frame.size.height -= XMGTopicCellMargin;
+//    frame.size.height -= XMGTopicCellMargin;
+    frame.size.height = self.topic.cellHeight - XMGTopicCellMargin;
     frame.origin.y += XMGTopicCellMargin;
     
     [super setFrame:frame];
 }
 
+- (IBAction)more {
+    UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:nil delegate:nil cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"收藏", @"举报", nil];
+    [sheet showInView:self.window];
+}
 @end

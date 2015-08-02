@@ -13,6 +13,7 @@
 #import <MJExtension.h>
 #import <MJRefresh.h>
 #import "XMGTopicCell.h"
+#import "XMGCommentViewController.h"
 
 @interface XMGTopicViewController ()
 /** 帖子数据 */
@@ -185,6 +186,13 @@ static NSString * const XMGTopicCellId = @"topic";
     
     // 返回这个模型对应的cell高度
     return topic.cellHeight;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    XMGCommentViewController *commentVc = [[XMGCommentViewController alloc] init];
+    commentVc.topic = self.topics[indexPath.row];
+    [self.navigationController pushViewController:commentVc animated:YES];
 }
 
 @end

@@ -21,7 +21,8 @@
     return @{
              @"small_image" : @"image0",
              @"large_image" : @"image1",
-             @"middle_image" : @"image2"
+             @"middle_image" : @"image2",
+             @"ID" : @"id"
              };
 }
 
@@ -115,8 +116,6 @@
         if (cmt) {
             NSString *content = [NSString stringWithFormat:@"%@ : %@", cmt.user.username, cmt.content];
             CGFloat contentH = [content boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:13]} context:nil].size.height;
-            
-            XMGLog(@"%f", contentH);
             _cellHeight += XMGTopicCellTopCmtTitleH + contentH + XMGTopicCellMargin;
         }
     

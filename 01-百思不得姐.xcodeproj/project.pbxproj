@@ -60,6 +60,8 @@
 		70DA0D561B60D7DC00DD59F1 /* XMGRecommendTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 70DA0D551B60D7DC00DD59F1 /* XMGRecommendTag.m */; };
 		70DA0D5A1B60D87E00DD59F1 /* XMGRecommendTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 70DA0D581B60D87E00DD59F1 /* XMGRecommendTagCell.m */; };
 		70DA0D5B1B60D87E00DD59F1 /* XMGRecommendTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70DA0D591B60D87E00DD59F1 /* XMGRecommendTagCell.xib */; };
+		70EA73D01B6DB7CB008F415B /* XMGCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70EA73CE1B6DB7CB008F415B /* XMGCommentViewController.m */; };
+		70EA73D11B6DB7CB008F415B /* XMGCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70EA73CF1B6DB7CB008F415B /* XMGCommentViewController.xib */; };
 		DA9E81567E8AC4629608A735 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E96429885DFBC9344ACBB0 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -169,6 +171,9 @@
 		70DA0D571B60D87E00DD59F1 /* XMGRecommendTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGRecommendTagCell.h; sourceTree = "<group>"; };
 		70DA0D581B60D87E00DD59F1 /* XMGRecommendTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGRecommendTagCell.m; sourceTree = "<group>"; };
 		70DA0D591B60D87E00DD59F1 /* XMGRecommendTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGRecommendTagCell.xib; sourceTree = "<group>"; };
+		70EA73CD1B6DB7CB008F415B /* XMGCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGCommentViewController.h; sourceTree = "<group>"; };
+		70EA73CE1B6DB7CB008F415B /* XMGCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGCommentViewController.m; sourceTree = "<group>"; };
+		70EA73CF1B6DB7CB008F415B /* XMGCommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGCommentViewController.xib; sourceTree = "<group>"; };
 		97E96429885DFBC9344ACBB0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ED90CEC200918F803FF50AF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -290,6 +295,9 @@
 				704EF87B1B68B88B009D1F71 /* XMGShowPictureViewController.h */,
 				704EF87C1B68B88B009D1F71 /* XMGShowPictureViewController.m */,
 				704EF87D1B68B88B009D1F71 /* XMGShowPictureViewController.xib */,
+				70EA73CD1B6DB7CB008F415B /* XMGCommentViewController.h */,
+				70EA73CE1B6DB7CB008F415B /* XMGCommentViewController.m */,
+				70EA73CF1B6DB7CB008F415B /* XMGCommentViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -609,6 +617,7 @@
 				704EF88D1B68D55D009D1F71 /* XMGPublishViewController.xib in Resources */,
 				706988661B64B89700DA90AA /* XMGPushGuideView.xib in Resources */,
 				70DA0D5B1B60D87E00DD59F1 /* XMGRecommendTagCell.xib in Resources */,
+				70EA73D11B6DB7CB008F415B /* XMGCommentViewController.xib in Resources */,
 				70DA0D451B60775600DD59F1 /* XMGRecommendCategoryCell.xib in Resources */,
 				7069885B1B646ACA00DA90AA /* XMGLoginRegisterViewController.xib in Resources */,
 				70B5CB631B5F27D200E1C3EA /* Images.xcassets in Resources */,
@@ -686,6 +695,7 @@
 				706988891B686CA400DA90AA /* XMGExtensionConfig.m in Sources */,
 				70DA0D5A1B60D87E00DD59F1 /* XMGRecommendTagCell.m in Sources */,
 				70B5CBC21B5F7EEF00E1C3EA /* XMGMeViewController.m in Sources */,
+				70EA73D01B6DB7CB008F415B /* XMGCommentViewController.m in Sources */,
 				704EF88C1B68D55D009D1F71 /* XMGPublishViewController.m in Sources */,
 				70DA0D441B60775600DD59F1 /* XMGRecommendCategoryCell.m in Sources */,
 				70DA0D561B60D7DC00DD59F1 /* XMGRecommendTag.m in Sources */,

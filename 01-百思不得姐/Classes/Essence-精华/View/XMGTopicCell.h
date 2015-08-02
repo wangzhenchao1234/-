@@ -11,4 +11,6 @@
 @interface XMGTopicCell : UITableViewCell
 /** 帖子数据 */
 @property (nonatomic, strong) XMGTopic *topic;
+
++ (instancetype)cell;
 @end
