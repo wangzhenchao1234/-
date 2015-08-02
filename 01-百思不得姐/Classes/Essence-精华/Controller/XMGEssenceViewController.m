@@ -45,6 +45,16 @@
  */
 - (void)setupChildVces
 {
+    XMGTopicViewController *all = [[XMGTopicViewController alloc] init];
+    all.title = @"全部";
+    all.type = XMGTopicTypeAll;
+    [self addChildViewController:all];
+    
+    XMGTopicViewController *video = [[XMGTopicViewController alloc] init];
+    video.title = @"视频";
+    video.type = XMGTopicTypeVideo;
+    [self addChildViewController:video];
+    
     XMGTopicViewController *voice = [[XMGTopicViewController alloc] init];
     voice.title = @"声音";
     voice.type = XMGTopicTypeVoice;
@@ -59,16 +69,6 @@
     word.title = @"段子";
     word.type = XMGTopicTypeWord;
     [self addChildViewController:word];
-    
-    XMGTopicViewController *all = [[XMGTopicViewController alloc] init];
-    all.title = @"全部";
-    all.type = XMGTopicTypeAll;
-    [self addChildViewController:all];
-    
-    XMGTopicViewController *video = [[XMGTopicViewController alloc] init];
-    video.title = @"视频";
-    video.type = XMGTopicTypeVideo;
-    [self addChildViewController:video];
 }
 
 /**

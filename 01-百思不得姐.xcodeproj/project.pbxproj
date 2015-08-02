@@ -29,6 +29,8 @@
 		706988891B686CA400DA90AA /* XMGExtensionConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 706988881B686CA400DA90AA /* XMGExtensionConfig.m */; };
 		7069888C1B68756E00DA90AA /* XMGTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7069888B1B68756E00DA90AA /* XMGTopicPictureView.m */; };
 		7069888E1B68758C00DA90AA /* XMGTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7069888D1B68758C00DA90AA /* XMGTopicPictureView.xib */; };
+		707ED9311B6A2488001A60E5 /* XMGTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 707ED9301B6A2488001A60E5 /* XMGTopicVideoView.m */; };
+		707ED9331B6A24C0001A60E5 /* XMGTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 707ED9321B6A24C0001A60E5 /* XMGTopicVideoView.xib */; };
 		70B5CB631B5F27D200E1C3EA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70B5CB621B5F27D200E1C3EA /* Images.xcassets */; };
 		70B5CB721B5F27D200E1C3EA /* _1______Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B5CB711B5F27D200E1C3EA /* _1______Tests.m */; };
 		70B5CBC01B5F7EEF00E1C3EA /* XMGEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B5CB9B1B5F7EEF00E1C3EA /* XMGEssenceViewController.m */; };
@@ -108,6 +110,9 @@
 		7069888A1B68756E00DA90AA /* XMGTopicPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTopicPictureView.h; sourceTree = "<group>"; };
 		7069888B1B68756E00DA90AA /* XMGTopicPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTopicPictureView.m; sourceTree = "<group>"; };
 		7069888D1B68758C00DA90AA /* XMGTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGTopicPictureView.xib; sourceTree = "<group>"; };
+		707ED92F1B6A2488001A60E5 /* XMGTopicVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTopicVideoView.h; sourceTree = "<group>"; };
+		707ED9301B6A2488001A60E5 /* XMGTopicVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTopicVideoView.m; sourceTree = "<group>"; };
+		707ED9321B6A24C0001A60E5 /* XMGTopicVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGTopicVideoView.xib; sourceTree = "<group>"; };
 		70B5CB521B5F27D200E1C3EA /* 01-百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "01-百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70B5CB561B5F27D200E1C3EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70B5CB621B5F27D200E1C3EA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -311,6 +316,9 @@
 				7015AD911B6A1D15008460CD /* XMGTopicVoiceView.h */,
 				7015AD921B6A1D15008460CD /* XMGTopicVoiceView.m */,
 				7015AD941B6A1D24008460CD /* XMGTopicVoiceView.xib */,
+				707ED92F1B6A2488001A60E5 /* XMGTopicVideoView.h */,
+				707ED9301B6A2488001A60E5 /* XMGTopicVideoView.m */,
+				707ED9321B6A24C0001A60E5 /* XMGTopicVideoView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -595,6 +603,7 @@
 				7069885B1B646ACA00DA90AA /* XMGLoginRegisterViewController.xib in Resources */,
 				70B5CB631B5F27D200E1C3EA /* Images.xcassets in Resources */,
 				70B5CBD11B5F942F00E1C3EA /* XMGFriendTrendsViewController.xib in Resources */,
+				707ED9331B6A24C0001A60E5 /* XMGTopicVideoView.xib in Resources */,
 				706988801B65CAAB00DA90AA /* XMGTopicCell.xib in Resources */,
 				704EF87F1B68B88B009D1F71 /* XMGShowPictureViewController.xib in Resources */,
 			);
@@ -670,6 +679,7 @@
 				70DA0D561B60D7DC00DD59F1 /* XMGRecommendTag.m in Sources */,
 				70DA0D4C1B6085D500DD59F1 /* XMGRecommendUserCell.m in Sources */,
 				70B5CBC01B5F7EEF00E1C3EA /* XMGEssenceViewController.m in Sources */,
+				707ED9311B6A2488001A60E5 /* XMGTopicVideoView.m in Sources */,
 				70B5CBC31B5F7EEF00E1C3EA /* XMGNewViewController.m in Sources */,
 				70B5CBC61B5F7EEF00E1C3EA /* UIView+XMGExtension.m in Sources */,
 				704EF8851B68BE52009D1F71 /* XMGProgressView.m in Sources */,

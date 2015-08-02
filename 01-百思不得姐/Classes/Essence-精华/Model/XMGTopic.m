@@ -92,8 +92,16 @@
             _voiceF = CGRectMake(voiceX, voiceY, voiceW, voiceH);
             
             _cellHeight += voiceH + XMGTopicCellMargin;
-         }
-        
+        } else if (self.type == XMGTopicTypeVideo) { // 视频帖子
+            CGFloat videoX = XMGTopicCellMargin;
+            CGFloat videoY = XMGTopicCellTextY + textH + XMGTopicCellMargin;
+            CGFloat videoW = maxSize.width;
+            CGFloat videoH = videoW * self.height / self.width;
+            _videoF = CGRectMake(videoX, videoY, videoW, videoH);
+            
+            _cellHeight += videoH + XMGTopicCellMargin;
+        }
+    
         // 底部工具条的高度
         _cellHeight += XMGTopicCellBottomBarH + XMGTopicCellMargin;
     }
