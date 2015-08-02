@@ -22,6 +22,13 @@
 
 @implementation XMGCommentCell
 
+- (void)awakeFromNib
+{
+    UIImageView *bgView = [[UIImageView alloc] init];
+    bgView.image = [UIImage imageNamed:@"mainCellBackground"];
+    self.backgroundView = bgView;
+}
+
 - (void)setComment:(XMGComment *)comment
 {
     _comment = comment;
@@ -38,6 +45,14 @@
     } else {
         self.voiceButton.hidden = YES;
     }
+}
+
+- (void)setFrame:(CGRect)frame
+{
+    frame.origin.x = XMGTopicCellMargin;
+    frame.size.width -= 2 * XMGTopicCellMargin;
+    
+    [super setFrame:frame];
 }
 
 @end
