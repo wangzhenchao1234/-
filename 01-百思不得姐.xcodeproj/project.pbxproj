@@ -10,6 +10,8 @@
 		7015AD931B6A1D15008460CD /* XMGTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7015AD921B6A1D15008460CD /* XMGTopicVoiceView.m */; };
 		7015AD951B6A1D24008460CD /* XMGTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7015AD941B6A1D24008460CD /* XMGTopicVoiceView.xib */; };
 		701EA76B1B6DFA9C00A558F3 /* XMGCommentHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 701EA76A1B6DFA9C00A558F3 /* XMGCommentHeaderView.m */; };
+		701EA76F1B6E063A00A558F3 /* XMGCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 701EA76D1B6E063A00A558F3 /* XMGCommentCell.m */; };
+		701EA7701B6E063A00A558F3 /* XMGCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 701EA76E1B6E063A00A558F3 /* XMGCommentCell.xib */; };
 		7035021C1B6DA83500CDF81B /* XMGUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7035021B1B6DA83500CDF81B /* XMGUser.m */; };
 		7035021F1B6DA8EF00CDF81B /* XMGComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 7035021E1B6DA8EF00CDF81B /* XMGComment.m */; };
 		704EF87E1B68B88B009D1F71 /* XMGShowPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 704EF87C1B68B88B009D1F71 /* XMGShowPictureViewController.m */; };
@@ -83,6 +85,9 @@
 		7015AD941B6A1D24008460CD /* XMGTopicVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGTopicVoiceView.xib; sourceTree = "<group>"; };
 		701EA7691B6DFA9C00A558F3 /* XMGCommentHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGCommentHeaderView.h; sourceTree = "<group>"; };
 		701EA76A1B6DFA9C00A558F3 /* XMGCommentHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGCommentHeaderView.m; sourceTree = "<group>"; };
+		701EA76C1B6E063A00A558F3 /* XMGCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGCommentCell.h; sourceTree = "<group>"; };
+		701EA76D1B6E063A00A558F3 /* XMGCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGCommentCell.m; sourceTree = "<group>"; };
+		701EA76E1B6E063A00A558F3 /* XMGCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGCommentCell.xib; sourceTree = "<group>"; };
 		7035021A1B6DA83500CDF81B /* XMGUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGUser.h; sourceTree = "<group>"; };
 		7035021B1B6DA83500CDF81B /* XMGUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGUser.m; sourceTree = "<group>"; };
 		7035021D1B6DA8EF00CDF81B /* XMGComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGComment.h; sourceTree = "<group>"; };
@@ -342,6 +347,9 @@
 				707ED9321B6A24C0001A60E5 /* XMGTopicVideoView.xib */,
 				701EA7691B6DFA9C00A558F3 /* XMGCommentHeaderView.h */,
 				701EA76A1B6DFA9C00A558F3 /* XMGCommentHeaderView.m */,
+				701EA76C1B6E063A00A558F3 /* XMGCommentCell.h */,
+				701EA76D1B6E063A00A558F3 /* XMGCommentCell.m */,
+				701EA76E1B6E063A00A558F3 /* XMGCommentCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -617,6 +625,7 @@
 			files = (
 				7069888E1B68758C00DA90AA /* XMGTopicPictureView.xib in Resources */,
 				70DA0D4D1B6085D500DD59F1 /* XMGRecommendUserCell.xib in Resources */,
+				701EA7701B6E063A00A558F3 /* XMGCommentCell.xib in Resources */,
 				70B5CBE01B5F998300E1C3EA /* XMGRecommendViewController.xib in Resources */,
 				7015AD951B6A1D24008460CD /* XMGTopicVoiceView.xib in Resources */,
 				704EF88D1B68D55D009D1F71 /* XMGPublishViewController.xib in Resources */,
@@ -708,6 +717,7 @@
 				70DA0D4C1B6085D500DD59F1 /* XMGRecommendUserCell.m in Sources */,
 				70B5CBC01B5F7EEF00E1C3EA /* XMGEssenceViewController.m in Sources */,
 				707ED9311B6A2488001A60E5 /* XMGTopicVideoView.m in Sources */,
+				701EA76F1B6E063A00A558F3 /* XMGCommentCell.m in Sources */,
 				70B5CBC31B5F7EEF00E1C3EA /* XMGNewViewController.m in Sources */,
 				70B5CBC61B5F7EEF00E1C3EA /* UIView+XMGExtension.m in Sources */,
 				704EF8851B68BE52009D1F71 /* XMGProgressView.m in Sources */,
