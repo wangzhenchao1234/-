@@ -7,6 +7,8 @@
 //
 
 #import "XMGTopic.h"
+#import "XMGComment.h"
+#import "XMGUser.h"
 #import <MJExtension.h>
 
 @implementation XMGTopic
@@ -21,6 +23,12 @@
              @"large_image" : @"image1",
              @"middle_image" : @"image2"
              };
+}
+
++ (NSDictionary *)objectClassInArray
+{
+//    return @{@"top_cmt" : [XMGComment class]};
+    return @{@"top_cmt" : @"XMGComment"};
 }
 
 - (NSString *)create_time
@@ -100,6 +108,16 @@
             _videoF = CGRectMake(videoX, videoY, videoW, videoH);
             
             _cellHeight += videoH + XMGTopicCellMargin;
+        }
+        
+        // 如果有最热评论
+        XMGComment *cmt = [self.top_cmt firstObject];
+        if (cmt) {
+            NSString *content = [NSString stringWithFormat:@"%@ : %@", cmt.user.username, cmt.content];
+            CGFloat contentH = [content boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:13]} context:nil].size.height;
+            
+            XMGLog(@"%f", contentH);
+            _cellHeight += XMGTopicCellTopCmtTitleH + contentH + XMGTopicCellMargin;
         }
     
         // 底部工具条的高度

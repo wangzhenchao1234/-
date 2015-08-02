@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		7015AD931B6A1D15008460CD /* XMGTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7015AD921B6A1D15008460CD /* XMGTopicVoiceView.m */; };
 		7015AD951B6A1D24008460CD /* XMGTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7015AD941B6A1D24008460CD /* XMGTopicVoiceView.xib */; };
+		7035021C1B6DA83500CDF81B /* XMGUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7035021B1B6DA83500CDF81B /* XMGUser.m */; };
+		7035021F1B6DA8EF00CDF81B /* XMGComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 7035021E1B6DA8EF00CDF81B /* XMGComment.m */; };
 		704EF87E1B68B88B009D1F71 /* XMGShowPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 704EF87C1B68B88B009D1F71 /* XMGShowPictureViewController.m */; };
 		704EF87F1B68B88B009D1F71 /* XMGShowPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 704EF87D1B68B88B009D1F71 /* XMGShowPictureViewController.xib */; };
 		704EF8851B68BE52009D1F71 /* XMGProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 704EF8841B68BE52009D1F71 /* XMGProgressView.m */; };
@@ -76,6 +78,10 @@
 		7015AD911B6A1D15008460CD /* XMGTopicVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTopicVoiceView.h; sourceTree = "<group>"; };
 		7015AD921B6A1D15008460CD /* XMGTopicVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTopicVoiceView.m; sourceTree = "<group>"; };
 		7015AD941B6A1D24008460CD /* XMGTopicVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGTopicVoiceView.xib; sourceTree = "<group>"; };
+		7035021A1B6DA83500CDF81B /* XMGUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGUser.h; sourceTree = "<group>"; };
+		7035021B1B6DA83500CDF81B /* XMGUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGUser.m; sourceTree = "<group>"; };
+		7035021D1B6DA8EF00CDF81B /* XMGComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGComment.h; sourceTree = "<group>"; };
+		7035021E1B6DA8EF00CDF81B /* XMGComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGComment.m; sourceTree = "<group>"; };
 		704EF87B1B68B88B009D1F71 /* XMGShowPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGShowPictureViewController.h; sourceTree = "<group>"; };
 		704EF87C1B68B88B009D1F71 /* XMGShowPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGShowPictureViewController.m; sourceTree = "<group>"; };
 		704EF87D1B68B88B009D1F71 /* XMGShowPictureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGShowPictureViewController.xib; sourceTree = "<group>"; };
@@ -295,6 +301,10 @@
 				70DA0D551B60D7DC00DD59F1 /* XMGRecommendTag.m */,
 				706988761B65BB6500DA90AA /* XMGTopic.h */,
 				706988771B65BB6500DA90AA /* XMGTopic.m */,
+				7035021A1B6DA83500CDF81B /* XMGUser.h */,
+				7035021B1B6DA83500CDF81B /* XMGUser.m */,
+				7035021D1B6DA8EF00CDF81B /* XMGComment.h */,
+				7035021E1B6DA8EF00CDF81B /* XMGComment.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -658,6 +668,7 @@
 			files = (
 				7069888C1B68756E00DA90AA /* XMGTopicPictureView.m in Sources */,
 				704EF87E1B68B88B009D1F71 /* XMGShowPictureViewController.m in Sources */,
+				7035021F1B6DA8EF00CDF81B /* XMGComment.m in Sources */,
 				70DA0D501B6087A900DD59F1 /* XMGRecommendUser.m in Sources */,
 				70B5CBDF1B5F998300E1C3EA /* XMGRecommendViewController.m in Sources */,
 				7069885A1B646ACA00DA90AA /* XMGLoginRegisterViewController.m in Sources */,
@@ -665,6 +676,7 @@
 				70DA0D531B60D67C00DD59F1 /* XMGRecommendTagsViewController.m in Sources */,
 				706988861B66107400DA90AA /* XMGTopicViewController.m in Sources */,
 				70DA0D401B60760600DD59F1 /* XMGRecommendCategory.m in Sources */,
+				7035021C1B6DA83500CDF81B /* XMGUser.m in Sources */,
 				706988641B64B88C00DA90AA /* XMGPushGuideView.m in Sources */,
 				706988781B65BB6500DA90AA /* XMGTopic.m in Sources */,
 				706988831B65DE0E00DA90AA /* NSDate+XMGExtension.m in Sources */,
