@@ -88,6 +88,9 @@
     UIImageView *bgView = [[UIImageView alloc] init];
     bgView.image = [UIImage imageNamed:@"mainCellBackground"];
     self.backgroundView = bgView;
+    
+//    self.profileImageView.layer.cornerRadius = self.profileImageView.width * 0.5;
+//    self.profileImageView.layer.masksToBounds = YES;
 }
 
 - (void)setTopic:(XMGTopic *)topic
@@ -98,7 +101,7 @@
     self.sinaVView.hidden = !topic.isSina_v;
     
     // 设置头像
-    [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    [self.profileImageView setHeader:topic.profile_image];
     
     // 设置名字
     self.nameLabel.text = topic.name;
@@ -167,9 +170,6 @@
 
 - (void)setFrame:(CGRect)frame
 {
-    frame.origin.x = XMGTopicCellMargin;
-    frame.size.width -= 2 * XMGTopicCellMargin;
-//    frame.size.height -= XMGTopicCellMargin;
     frame.size.height = self.topic.cellHeight - XMGTopicCellMargin;
     frame.origin.y += XMGTopicCellMargin;
     

@@ -37,13 +37,17 @@
     UIImageView *bgView = [[UIImageView alloc] init];
     bgView.image = [UIImage imageNamed:@"mainCellBackground"];
     self.backgroundView = bgView;
+    
+//    self.profileImageView.layer.cornerRadius = self.profileImageView.width * 0.5;
+//    self.profileImageView.layer.masksToBounds = YES;
 }
 
 - (void)setComment:(XMGComment *)comment
 {
     _comment = comment;
     
-    [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:comment.user.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    [self.profileImageView setHeader:comment.user.profile_image];
+    
     self.sexView.image = [comment.user.sex isEqualToString:XMGUserSexMale] ? [UIImage imageNamed:@"Profile_manIcon"] : [UIImage imageNamed:@"Profile_womanIcon"];
     self.contentLabel.text = comment.content;
     self.usernameLabel.text = comment.user.username;
@@ -55,14 +59,6 @@
     } else {
         self.voiceButton.hidden = YES;
     }
-}
-
-- (void)setFrame:(CGRect)frame
-{
-    frame.origin.x = XMGTopicCellMargin;
-    frame.size.width -= 2 * XMGTopicCellMargin;
-    
-    [super setFrame:frame];
 }
 
 @end

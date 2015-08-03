@@ -34,7 +34,6 @@
         UILabel *label = [[UILabel alloc] init];
         label.textColor = XMGRGBColor(67, 67, 67);
         label.width = 200;
-        label.x = XMGTopicCellMargin;
         label.autoresizingMask = UIViewAutoresizingFlexibleHeight;
         [self.contentView addSubview:label];
         self.label = label;

@@ -36,6 +36,8 @@
 		7069888E1B68758C00DA90AA /* XMGTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7069888D1B68758C00DA90AA /* XMGTopicPictureView.xib */; };
 		707ED9311B6A2488001A60E5 /* XMGTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 707ED9301B6A2488001A60E5 /* XMGTopicVideoView.m */; };
 		707ED9331B6A24C0001A60E5 /* XMGTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 707ED9321B6A24C0001A60E5 /* XMGTopicVideoView.xib */; };
+		70AA85781B6F1DAE00E36561 /* UIImage+XMGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AA85771B6F1DAE00E36561 /* UIImage+XMGExtension.m */; };
+		70AA857B1B6F455C00E36561 /* UIImageView+XMGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AA857A1B6F455C00E36561 /* UIImageView+XMGExtension.m */; };
 		70B5CB631B5F27D200E1C3EA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70B5CB621B5F27D200E1C3EA /* Images.xcassets */; };
 		70B5CB721B5F27D200E1C3EA /* _1______Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B5CB711B5F27D200E1C3EA /* _1______Tests.m */; };
 		70B5CBC01B5F7EEF00E1C3EA /* XMGEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B5CB9B1B5F7EEF00E1C3EA /* XMGEssenceViewController.m */; };
@@ -130,6 +132,10 @@
 		707ED92F1B6A2488001A60E5 /* XMGTopicVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTopicVideoView.h; sourceTree = "<group>"; };
 		707ED9301B6A2488001A60E5 /* XMGTopicVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTopicVideoView.m; sourceTree = "<group>"; };
 		707ED9321B6A24C0001A60E5 /* XMGTopicVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGTopicVideoView.xib; sourceTree = "<group>"; };
+		70AA85761B6F1DAE00E36561 /* UIImage+XMGExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+XMGExtension.h"; sourceTree = "<group>"; };
+		70AA85771B6F1DAE00E36561 /* UIImage+XMGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XMGExtension.m"; sourceTree = "<group>"; };
+		70AA85791B6F455C00E36561 /* UIImageView+XMGExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+XMGExtension.h"; sourceTree = "<group>"; };
+		70AA857A1B6F455C00E36561 /* UIImageView+XMGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+XMGExtension.m"; sourceTree = "<group>"; };
 		70B5CB521B5F27D200E1C3EA /* 01-百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "01-百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70B5CB561B5F27D200E1C3EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70B5CB621B5F27D200E1C3EA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -505,6 +511,10 @@
 				70B5CBB71B5F7EEF00E1C3EA /* UIView+XMGExtension.m */,
 				706988811B65DE0E00DA90AA /* NSDate+XMGExtension.h */,
 				706988821B65DE0E00DA90AA /* NSDate+XMGExtension.m */,
+				70AA85761B6F1DAE00E36561 /* UIImage+XMGExtension.h */,
+				70AA85771B6F1DAE00E36561 /* UIImage+XMGExtension.m */,
+				70AA85791B6F455C00E36561 /* UIImageView+XMGExtension.h */,
+				70AA857A1B6F455C00E36561 /* UIImageView+XMGExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -703,6 +713,7 @@
 				7069885A1B646ACA00DA90AA /* XMGLoginRegisterViewController.m in Sources */,
 				7069887B1B65C81000DA90AA /* XMGConst.m in Sources */,
 				70DA0D531B60D67C00DD59F1 /* XMGRecommendTagsViewController.m in Sources */,
+				70AA857B1B6F455C00E36561 /* UIImageView+XMGExtension.m in Sources */,
 				706988861B66107400DA90AA /* XMGTopicViewController.m in Sources */,
 				70DA0D401B60760600DD59F1 /* XMGRecommendCategory.m in Sources */,
 				7035021C1B6DA83500CDF81B /* XMGUser.m in Sources */,
@@ -735,6 +746,7 @@
 				70B5CBE21B5F9A8100E1C3EA /* Foundation+Log.m in Sources */,
 				70B5CBC81B5F7EEF00E1C3EA /* main.m in Sources */,
 				706988611B647F7F00DA90AA /* XMGTextField.m in Sources */,
+				70AA85781B6F1DAE00E36561 /* UIImage+XMGExtension.m in Sources */,
 				70B5CBC51B5F7EEF00E1C3EA /* UIBarButtonItem+XMGExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
