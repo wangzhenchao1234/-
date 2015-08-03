@@ -16,6 +16,8 @@
 #import "UIImage+XMGExtension.h"
 #import "UIImageView+XMGExtension.h"
 
+#define XMGNoteCenter [NSNotificationCenter defaultCenter]
+
 #ifdef DEBUG
 #define XMGLog(...) NSLog(__VA_ARGS__)
 #else

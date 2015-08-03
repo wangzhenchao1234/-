@@ -44,6 +44,9 @@
 {
     [super layoutSubviews];
     
+    // 标记按钮是否已经添加过监听器
+    static BOOL added = NO;
+    
     CGFloat width = self.width;
     CGFloat height = self.height;
     
@@ -55,7 +58,7 @@
     CGFloat buttonW = width / 5;
     CGFloat buttonH = height;
     NSInteger index = 0;
-    for (UIView *button in self.subviews) {
+    for (UIControl *button in self.subviews) {
         if (![button isKindOfClass:[UIControl class]] || button == self.publishButton) continue;
         
         // 计算按钮的x值
@@ -64,7 +67,20 @@
         
         // 增加索引
         index++;
+        
+        if (added == NO) {
+            // 监听按钮点击
+            [button addTarget:self action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];
+        }
     }
+    
+    added = YES;
+}
+
+- (void)buttonClick
+{
+    // 发出一个通知
+    [XMGNoteCenter postNotificationName:XMGTabBarDidSelectNotification object:nil userInfo:nil];
 }
 
 @end
