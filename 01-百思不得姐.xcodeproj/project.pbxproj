@@ -65,6 +65,7 @@
 		70DA0D5B1B60D87E00DD59F1 /* XMGRecommendTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70DA0D591B60D87E00DD59F1 /* XMGRecommendTagCell.xib */; };
 		70EA73D01B6DB7CB008F415B /* XMGCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70EA73CE1B6DB7CB008F415B /* XMGCommentViewController.m */; };
 		70EA73D11B6DB7CB008F415B /* XMGCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70EA73CF1B6DB7CB008F415B /* XMGCommentViewController.xib */; };
+		70F4A4811B6E1A6400709E64 /* XMGTopWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F4A4801B6E1A6400709E64 /* XMGTopWindow.m */; };
 		DA9E81567E8AC4629608A735 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E96429885DFBC9344ACBB0 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -182,6 +183,8 @@
 		70EA73CD1B6DB7CB008F415B /* XMGCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGCommentViewController.h; sourceTree = "<group>"; };
 		70EA73CE1B6DB7CB008F415B /* XMGCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGCommentViewController.m; sourceTree = "<group>"; };
 		70EA73CF1B6DB7CB008F415B /* XMGCommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGCommentViewController.xib; sourceTree = "<group>"; };
+		70F4A47F1B6E1A6400709E64 /* XMGTopWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTopWindow.h; sourceTree = "<group>"; };
+		70F4A4801B6E1A6400709E64 /* XMGTopWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTopWindow.m; sourceTree = "<group>"; };
 		97E96429885DFBC9344ACBB0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ED90CEC200918F803FF50AF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -528,6 +531,8 @@
 				706988621B64B88C00DA90AA /* XMGPushGuideView.h */,
 				706988631B64B88C00DA90AA /* XMGPushGuideView.m */,
 				706988651B64B89700DA90AA /* XMGPushGuideView.xib */,
+				70F4A47F1B6E1A6400709E64 /* XMGTopWindow.h */,
+				70F4A4801B6E1A6400709E64 /* XMGTopWindow.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -691,6 +696,7 @@
 			files = (
 				7069888C1B68756E00DA90AA /* XMGTopicPictureView.m in Sources */,
 				704EF87E1B68B88B009D1F71 /* XMGShowPictureViewController.m in Sources */,
+				70F4A4811B6E1A6400709E64 /* XMGTopWindow.m in Sources */,
 				7035021F1B6DA8EF00CDF81B /* XMGComment.m in Sources */,
 				70DA0D501B6087A900DD59F1 /* XMGRecommendUser.m in Sources */,
 				70B5CBDF1B5F998300E1C3EA /* XMGRecommendViewController.m in Sources */,
