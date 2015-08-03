@@ -35,6 +35,8 @@
 @property (nonatomic, assign) CGFloat width;
 /** 图片的高度 */
 @property (nonatomic, assign) CGFloat height;
+/** 最热评论 */
+@property (nonatomic, strong) XMGComment *top_cmt;
 /** 小图片的URL */
 @property (nonatomic, copy) NSString *small_image;
 /** 中图片的URL */
@@ -49,8 +51,6 @@
 @property (nonatomic, assign) NSInteger videotime;
 /** 播放次数 */
 @property (nonatomic, assign) NSInteger playcount;
-/** 最热评论 */
-@property (nonatomic, strong) XMGComment *top_cmt;
 
 /** qzone_uid */
 //@property (nonatomic, copy) NSString *qzone_uid;

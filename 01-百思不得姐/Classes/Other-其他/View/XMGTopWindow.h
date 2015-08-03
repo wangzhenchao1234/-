@@ -10,4 +10,5 @@
 
 @interface XMGTopWindow : NSObject
 + (void)show;
++ (void)hide;
 @end
