@@ -38,6 +38,12 @@
 		707ED9331B6A24C0001A60E5 /* XMGTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 707ED9321B6A24C0001A60E5 /* XMGTopicVideoView.xib */; };
 		70AA85781B6F1DAE00E36561 /* UIImage+XMGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AA85771B6F1DAE00E36561 /* UIImage+XMGExtension.m */; };
 		70AA857B1B6F455C00E36561 /* UIImageView+XMGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AA857A1B6F455C00E36561 /* UIImageView+XMGExtension.m */; };
+		70AA857E1B6F574C00E36561 /* XMGMeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AA857D1B6F574C00E36561 /* XMGMeCell.m */; };
+		70AA85811B6F5A1900E36561 /* XMGMeFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AA85801B6F5A1900E36561 /* XMGMeFooterView.m */; };
+		70AA85841B6F5C4200E36561 /* XMGSquare.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AA85831B6F5C4200E36561 /* XMGSquare.m */; };
+		70AA85871B6F5EA100E36561 /* XMGSqaureButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AA85861B6F5EA100E36561 /* XMGSqaureButton.m */; };
+		70AA858B1B6F683700E36561 /* XMGWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AA85891B6F683700E36561 /* XMGWebViewController.m */; };
+		70AA858C1B6F683700E36561 /* XMGWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70AA858A1B6F683700E36561 /* XMGWebViewController.xib */; };
 		70B5CB631B5F27D200E1C3EA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70B5CB621B5F27D200E1C3EA /* Images.xcassets */; };
 		70B5CB721B5F27D200E1C3EA /* _1______Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B5CB711B5F27D200E1C3EA /* _1______Tests.m */; };
 		70B5CBC01B5F7EEF00E1C3EA /* XMGEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B5CB9B1B5F7EEF00E1C3EA /* XMGEssenceViewController.m */; };
@@ -136,6 +142,17 @@
 		70AA85771B6F1DAE00E36561 /* UIImage+XMGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XMGExtension.m"; sourceTree = "<group>"; };
 		70AA85791B6F455C00E36561 /* UIImageView+XMGExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+XMGExtension.h"; sourceTree = "<group>"; };
 		70AA857A1B6F455C00E36561 /* UIImageView+XMGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+XMGExtension.m"; sourceTree = "<group>"; };
+		70AA857C1B6F574C00E36561 /* XMGMeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGMeCell.h; sourceTree = "<group>"; };
+		70AA857D1B6F574C00E36561 /* XMGMeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGMeCell.m; sourceTree = "<group>"; };
+		70AA857F1B6F5A1900E36561 /* XMGMeFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGMeFooterView.h; sourceTree = "<group>"; };
+		70AA85801B6F5A1900E36561 /* XMGMeFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGMeFooterView.m; sourceTree = "<group>"; };
+		70AA85821B6F5C4200E36561 /* XMGSquare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGSquare.h; sourceTree = "<group>"; };
+		70AA85831B6F5C4200E36561 /* XMGSquare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGSquare.m; sourceTree = "<group>"; };
+		70AA85851B6F5EA100E36561 /* XMGSqaureButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGSqaureButton.h; sourceTree = "<group>"; };
+		70AA85861B6F5EA100E36561 /* XMGSqaureButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGSqaureButton.m; sourceTree = "<group>"; };
+		70AA85881B6F683700E36561 /* XMGWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGWebViewController.h; sourceTree = "<group>"; };
+		70AA85891B6F683700E36561 /* XMGWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGWebViewController.m; sourceTree = "<group>"; };
+		70AA858A1B6F683700E36561 /* XMGWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGWebViewController.xib; sourceTree = "<group>"; };
 		70B5CB521B5F27D200E1C3EA /* 01-百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "01-百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70B5CB561B5F27D200E1C3EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70B5CB621B5F27D200E1C3EA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -432,6 +449,9 @@
 			children = (
 				70B5CBA61B5F7EEF00E1C3EA /* XMGMeViewController.h */,
 				70B5CBA71B5F7EEF00E1C3EA /* XMGMeViewController.m */,
+				70AA85881B6F683700E36561 /* XMGWebViewController.h */,
+				70AA85891B6F683700E36561 /* XMGWebViewController.m */,
+				70AA858A1B6F683700E36561 /* XMGWebViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -439,6 +459,8 @@
 		70B5CBA81B5F7EEF00E1C3EA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				70AA85821B6F5C4200E36561 /* XMGSquare.h */,
+				70AA85831B6F5C4200E36561 /* XMGSquare.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -446,6 +468,12 @@
 		70B5CBA91B5F7EEF00E1C3EA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				70AA857C1B6F574C00E36561 /* XMGMeCell.h */,
+				70AA857D1B6F574C00E36561 /* XMGMeCell.m */,
+				70AA857F1B6F5A1900E36561 /* XMGMeFooterView.h */,
+				70AA85801B6F5A1900E36561 /* XMGMeFooterView.m */,
+				70AA85851B6F5EA100E36561 /* XMGSqaureButton.h */,
+				70AA85861B6F5EA100E36561 /* XMGSqaureButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -645,6 +673,7 @@
 				7015AD951B6A1D24008460CD /* XMGTopicVoiceView.xib in Resources */,
 				704EF88D1B68D55D009D1F71 /* XMGPublishViewController.xib in Resources */,
 				706988661B64B89700DA90AA /* XMGPushGuideView.xib in Resources */,
+				70AA858C1B6F683700E36561 /* XMGWebViewController.xib in Resources */,
 				70DA0D5B1B60D87E00DD59F1 /* XMGRecommendTagCell.xib in Resources */,
 				70EA73D11B6DB7CB008F415B /* XMGCommentViewController.xib in Resources */,
 				70DA0D451B60775600DD59F1 /* XMGRecommendCategoryCell.xib in Resources */,
@@ -707,6 +736,8 @@
 				7069888C1B68756E00DA90AA /* XMGTopicPictureView.m in Sources */,
 				704EF87E1B68B88B009D1F71 /* XMGShowPictureViewController.m in Sources */,
 				70F4A4811B6E1A6400709E64 /* XMGTopWindow.m in Sources */,
+				70AA857E1B6F574C00E36561 /* XMGMeCell.m in Sources */,
+				70AA85811B6F5A1900E36561 /* XMGMeFooterView.m in Sources */,
 				7035021F1B6DA8EF00CDF81B /* XMGComment.m in Sources */,
 				70DA0D501B6087A900DD59F1 /* XMGRecommendUser.m in Sources */,
 				70B5CBDF1B5F998300E1C3EA /* XMGRecommendViewController.m in Sources */,
@@ -723,6 +754,7 @@
 				7015AD931B6A1D15008460CD /* XMGTopicVoiceView.m in Sources */,
 				70B5CBCF1B5F848E00E1C3EA /* XMGNavigationController.m in Sources */,
 				70B5CBC91B5F7EEF00E1C3EA /* XMGTabBar.m in Sources */,
+				70AA85871B6F5EA100E36561 /* XMGSqaureButton.m in Sources */,
 				706988891B686CA400DA90AA /* XMGExtensionConfig.m in Sources */,
 				70DA0D5A1B60D87E00DD59F1 /* XMGRecommendTagCell.m in Sources */,
 				70B5CBC21B5F7EEF00E1C3EA /* XMGMeViewController.m in Sources */,
@@ -743,9 +775,11 @@
 				70B5CBC71B5F7EEF00E1C3EA /* XMGTabBarController.m in Sources */,
 				70B5CBC11B5F7EEF00E1C3EA /* XMGFriendTrendsViewController.m in Sources */,
 				70B5CBC41B5F7EEF00E1C3EA /* AppDelegate.m in Sources */,
+				70AA85841B6F5C4200E36561 /* XMGSquare.m in Sources */,
 				70B5CBE21B5F9A8100E1C3EA /* Foundation+Log.m in Sources */,
 				70B5CBC81B5F7EEF00E1C3EA /* main.m in Sources */,
 				706988611B647F7F00DA90AA /* XMGTextField.m in Sources */,
+				70AA858B1B6F683700E36561 /* XMGWebViewController.m in Sources */,
 				70AA85781B6F1DAE00E36561 /* UIImage+XMGExtension.m in Sources */,
 				70B5CBC51B5F7EEF00E1C3EA /* UIBarButtonItem+XMGExtension.m in Sources */,
 			);

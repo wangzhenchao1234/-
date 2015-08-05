@@ -85,6 +85,12 @@ static NSString * const XMGCommentId = @"comment";
     params[@"lastcid"] = cmt.ID;
     
     [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
+        // 没有数据
+        if (![responseObject isKindOfClass:[NSDictionary class]]) {
+            self.tableView.footer.hidden = YES;
+            return;
+        }
+        
         // 最新评论
         NSArray *newComments = [XMGComment objectArrayWithKeyValuesArray:responseObject[@"data"]];
         [self.latestComments addObjectsFromArray:newComments];
@@ -126,6 +132,11 @@ static NSString * const XMGCommentId = @"comment";
     params[@"hot"] = @"1";
     
     [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
+        if (![responseObject isKindOfClass:[NSDictionary class]]) {
+            [self.tableView.header endRefreshing];
+            return;
+        } // 说明没有评论数据
+        
         // 最热评论
         self.hotComments = [XMGComment objectArrayWithKeyValuesArray:responseObject[@"hot"]];
         // 最新评论
