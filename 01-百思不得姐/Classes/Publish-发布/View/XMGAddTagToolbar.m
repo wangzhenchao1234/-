@@ -22,10 +22,8 @@
     UIButton *addButton = [[UIButton alloc] init];
     [addButton addTarget:self action:@selector(addButtonClick) forControlEvents:UIControlEventTouchUpInside];
     [addButton setImage:[UIImage imageNamed:@"tag_add_icon"] forState:UIControlStateNormal];
-//    addButton.size = [UIImage imageNamed:@"tag_add_icon"].size;
-//    addButton.size = [addButton imageForState:UIControlStateNormal].size;
     addButton.size = addButton.currentImage.size;
-    addButton.x = XMGTopicCellMargin;
+    addButton.x = XMGTagMargin;
     [self.topView addSubview:addButton];
 }
 
@@ -35,11 +33,6 @@
     UIViewController *root = [UIApplication sharedApplication].keyWindow.rootViewController;
     UINavigationController *nav = (UINavigationController *)root.presentedViewController;
     [nav pushViewController:vc animated:YES];
-    
-    // a modal 出 b
-//    [a presentViewController:b animated:YES completion:nil];
-//    a.presentedViewController -> b
-//    b.presentingViewController -> a
 }
 
 @end
