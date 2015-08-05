@@ -22,7 +22,7 @@
     if (![currentVersion isEqualToString:sanboxVersion]) {
         UIWindow *window = [UIApplication sharedApplication].keyWindow;
         
-        XMGPushGuideView *guideView = [XMGPushGuideView guideView];
+        XMGPushGuideView *guideView = [XMGPushGuideView viewFromXib];
         guideView.frame = window.bounds;
         [window addSubview:guideView];
         
@@ -30,11 +30,6 @@
         [[NSUserDefaults standardUserDefaults] setObject:currentVersion forKey:key];
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
-}
-
-+ (instancetype)guideView
-{
-    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] lastObject];
 }
 
 - (IBAction)close {

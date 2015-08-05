@@ -13,6 +13,9 @@
 		70188AA31B719AA0002BC352 /* XMGPublishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70188AA01B719AA0002BC352 /* XMGPublishViewController.xib */; };
 		70188AA61B719B23002BC352 /* XMGPostWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70188AA51B719B23002BC352 /* XMGPostWordViewController.m */; };
 		70188AA91B71A56E002BC352 /* XMGPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 70188AA81B71A56E002BC352 /* XMGPlaceholderTextView.m */; };
+		70188AAC1B71BA79002BC352 /* XMGAddTagToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 70188AAB1B71BA79002BC352 /* XMGAddTagToolbar.m */; };
+		70188AAE1B71BA86002BC352 /* XMGAddTagToolbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70188AAD1B71BA86002BC352 /* XMGAddTagToolbar.xib */; };
+		70188AB11B71E60C002BC352 /* XMGAddTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70188AB01B71E60C002BC352 /* XMGAddTagViewController.m */; };
 		701EA76B1B6DFA9C00A558F3 /* XMGCommentHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 701EA76A1B6DFA9C00A558F3 /* XMGCommentHeaderView.m */; };
 		701EA76F1B6E063A00A558F3 /* XMGCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 701EA76D1B6E063A00A558F3 /* XMGCommentCell.m */; };
 		701EA7701B6E063A00A558F3 /* XMGCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 701EA76E1B6E063A00A558F3 /* XMGCommentCell.xib */; };
@@ -101,6 +104,11 @@
 		70188AA51B719B23002BC352 /* XMGPostWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPostWordViewController.m; sourceTree = "<group>"; };
 		70188AA71B71A56E002BC352 /* XMGPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGPlaceholderTextView.h; sourceTree = "<group>"; };
 		70188AA81B71A56E002BC352 /* XMGPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPlaceholderTextView.m; sourceTree = "<group>"; };
+		70188AAA1B71BA79002BC352 /* XMGAddTagToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGAddTagToolbar.h; sourceTree = "<group>"; };
+		70188AAB1B71BA79002BC352 /* XMGAddTagToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGAddTagToolbar.m; sourceTree = "<group>"; };
+		70188AAD1B71BA86002BC352 /* XMGAddTagToolbar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGAddTagToolbar.xib; sourceTree = "<group>"; };
+		70188AAF1B71E60C002BC352 /* XMGAddTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGAddTagViewController.h; sourceTree = "<group>"; };
+		70188AB01B71E60C002BC352 /* XMGAddTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGAddTagViewController.m; sourceTree = "<group>"; };
 		701EA7691B6DFA9C00A558F3 /* XMGCommentHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGCommentHeaderView.h; sourceTree = "<group>"; };
 		701EA76A1B6DFA9C00A558F3 /* XMGCommentHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGCommentHeaderView.m; sourceTree = "<group>"; };
 		701EA76C1B6E063A00A558F3 /* XMGCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGCommentCell.h; sourceTree = "<group>"; };
@@ -263,6 +271,8 @@
 				70188AA01B719AA0002BC352 /* XMGPublishViewController.xib */,
 				70188AA41B719B23002BC352 /* XMGPostWordViewController.h */,
 				70188AA51B719B23002BC352 /* XMGPostWordViewController.m */,
+				70188AAF1B71E60C002BC352 /* XMGAddTagViewController.h */,
+				70188AB01B71E60C002BC352 /* XMGAddTagViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -272,6 +282,9 @@
 			children = (
 				70188AA71B71A56E002BC352 /* XMGPlaceholderTextView.h */,
 				70188AA81B71A56E002BC352 /* XMGPlaceholderTextView.m */,
+				70188AAA1B71BA79002BC352 /* XMGAddTagToolbar.h */,
+				70188AAB1B71BA79002BC352 /* XMGAddTagToolbar.m */,
+				70188AAD1B71BA86002BC352 /* XMGAddTagToolbar.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -717,6 +730,7 @@
 				707ED9331B6A24C0001A60E5 /* XMGTopicVideoView.xib in Resources */,
 				706988801B65CAAB00DA90AA /* XMGTopicCell.xib in Resources */,
 				704EF87F1B68B88B009D1F71 /* XMGShowPictureViewController.xib in Resources */,
+				70188AAE1B71BA86002BC352 /* XMGAddTagToolbar.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -769,6 +783,7 @@
 			files = (
 				7069888C1B68756E00DA90AA /* XMGTopicPictureView.m in Sources */,
 				704EF87E1B68B88B009D1F71 /* XMGShowPictureViewController.m in Sources */,
+				70188AB11B71E60C002BC352 /* XMGAddTagViewController.m in Sources */,
 				70F4A4811B6E1A6400709E64 /* XMGTopWindow.m in Sources */,
 				70AA857E1B6F574C00E36561 /* XMGMeCell.m in Sources */,
 				70AA85811B6F5A1900E36561 /* XMGMeFooterView.m in Sources */,
@@ -780,6 +795,7 @@
 				7069887B1B65C81000DA90AA /* XMGConst.m in Sources */,
 				70DA0D531B60D67C00DD59F1 /* XMGRecommendTagsViewController.m in Sources */,
 				70AA857B1B6F455C00E36561 /* UIImageView+XMGExtension.m in Sources */,
+				70188AAC1B71BA79002BC352 /* XMGAddTagToolbar.m in Sources */,
 				706988861B66107400DA90AA /* XMGTopicViewController.m in Sources */,
 				70DA0D401B60760600DD59F1 /* XMGRecommendCategory.m in Sources */,
 				7035021C1B6DA83500CDF81B /* XMGUser.m in Sources */,

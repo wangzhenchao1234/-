@@ -48,15 +48,10 @@
 
 @implementation XMGTopicCell
 
-+ (instancetype)cell
-{
-    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] firstObject];
-}
-
 - (XMGTopicPictureView *)pictureView
 {
     if (!_pictureView) {
-        XMGTopicPictureView *pictureView = [XMGTopicPictureView pictureView];
+        XMGTopicPictureView *pictureView = [XMGTopicPictureView viewFromXib];
         [self.contentView addSubview:pictureView];
         _pictureView = pictureView;
     }
@@ -66,7 +61,7 @@
 - (XMGTopicVoiceView *)voiceView
 {
     if (!_voiceView) {
-        XMGTopicVoiceView *voiceView = [XMGTopicVoiceView voiceView];
+        XMGTopicVoiceView *voiceView = [XMGTopicVoiceView viewFromXib];
         [self.contentView addSubview:voiceView];
         _voiceView = voiceView;
     }
@@ -76,7 +71,7 @@
 - (XMGTopicVideoView *)videoView
 {
     if (!_videoView) {
-        XMGTopicVideoView *videoView = [XMGTopicVideoView videoView];
+        XMGTopicVideoView *videoView = [XMGTopicVideoView viewFromXib];
         [self.contentView addSubview:videoView];
         _videoView = videoView;
     }

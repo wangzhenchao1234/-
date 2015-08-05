@@ -25,7 +25,6 @@
         placeholderLabel.y = 7;
         [self addSubview:placeholderLabel];
         _placeholderLabel = placeholderLabel;
-//        self.placeholderLabel = placeholderLabel; // setter方法
     }
     return _placeholderLabel;
 }
@@ -65,10 +64,12 @@
 /**
  * 更新占位文字的尺寸
  */
-- (void)updatePlaceholderLabelSize
+- (void)layoutSubviews
 {
-    CGSize maxSize = CGSizeMake(XMGScreenW - 2 * self.placeholderLabel.x, MAXFLOAT);
-    self.placeholderLabel.size = [self.placeholder boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : self.font} context:nil].size;
+    [super layoutSubviews];
+    
+    self.placeholderLabel.width = self.width - 2 * self.placeholderLabel.x;
+    [self.placeholderLabel sizeToFit];
 }
 
 #pragma mark - 重写setter
@@ -85,7 +86,7 @@
     
     self.placeholderLabel.text = placeholder;
     
-    [self updatePlaceholderLabelSize];
+    [self setNeedsLayout];
 }
 
 - (void)setFont:(UIFont *)font
@@ -94,7 +95,7 @@
     
     self.placeholderLabel.font = font;
     
-    [self updatePlaceholderLabelSize];
+    [self setNeedsLayout];
 }
 
 - (void)setText:(NSString *)text
@@ -110,5 +111,10 @@
     
     [self textDidChange];
 }
+
+/**
+ * setNeedsDisplay方法 : 会在恰当的时刻自动调用drawRect:方法
+ * setNeedsLayout方法 : 会在恰当的时刻调用layoutSubviews方法
+ */
 
 @end

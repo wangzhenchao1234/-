@@ -172,7 +172,7 @@ static NSString * const XMGCommentId = @"comment";
     }
     
     // 添加cell
-    XMGTopicCell *cell = [XMGTopicCell cell];
+    XMGTopicCell *cell = [XMGTopicCell viewFromXib];
     cell.topic = self.topic;
     cell.size = CGSizeMake(XMGScreenW, self.topic.cellHeight);
     [header addSubview:cell];

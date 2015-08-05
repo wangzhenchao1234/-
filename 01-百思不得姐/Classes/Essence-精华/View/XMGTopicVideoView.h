@@ -10,8 +10,6 @@
 @class XMGTopic;
 
 @interface XMGTopicVideoView : UIView
-+ (instancetype)videoView;
-
 /** 帖子数据 */
 @property (nonatomic, strong) XMGTopic *topic;
 @end

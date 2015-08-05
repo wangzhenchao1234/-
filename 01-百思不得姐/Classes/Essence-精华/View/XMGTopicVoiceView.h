@@ -11,8 +11,6 @@
 
 
 @interface XMGTopicVoiceView : UIView
-+ (instancetype)voiceView;
-
 /** 帖子数据 */
 @property (nonatomic, strong) XMGTopic *topic;
 @end
