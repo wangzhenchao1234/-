@@ -8,31 +8,17 @@
 
 #import "XMGPublishViewController.h"
 #import "XMGVerticalButton.h"
+#import "XMGPostWordViewController.h"
+#import "XMGNavigationController.h"
 #import <POP.h>
 
 static CGFloat const XMGAnimationDelay = 0.1;
 static CGFloat const XMGSpringFactor = 10;
 
 @interface XMGPublishViewController ()
-///**  */
-//@property (nonatomic, copy) void (^completionBlock)();
-//
-///** <#注释#> */
-//@property (nonatomic, assign) int age;
 @end
 
 @implementation XMGPublishViewController
-
-//- (void)test:(void (^)())completionBlock
-//{
-//    int age;
-//    
-//    void (^block)() = ^{
-//    
-//    
-//    };
-//    block();
-//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -103,10 +89,13 @@ static CGFloat const XMGSpringFactor = 10;
 - (void)buttonClick:(UIButton *)button
 {
     [self cancelWithCompletionBlock:^{
-        if (button.tag == 0) {
-            XMGLog(@"发视频");
-        } else if (button.tag == 1) {
-            XMGLog(@"发图片");
+        if (button.tag == 2) {
+            XMGPostWordViewController *postWord = [[XMGPostWordViewController alloc] init];
+            XMGNavigationController *nav = [[XMGNavigationController alloc] initWithRootViewController:postWord];
+            
+            // 这里不能使用self来弹出其他控制器, 因为self执行了dismiss操作
+            UIViewController *root = [UIApplication sharedApplication].keyWindow.rootViewController;
+            [root presentViewController:nav animated:YES completion:nil];
         }
     }];
 }

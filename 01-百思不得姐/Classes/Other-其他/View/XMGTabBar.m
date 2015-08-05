@@ -8,6 +8,8 @@
 
 #import "XMGTabBar.h"
 #import "XMGPublishViewController.h"
+#import "XMGPostWordViewController.h"
+#import "XMGNavigationController.h"
 
 @interface XMGTabBar()
 /** 发布按钮 */
@@ -36,8 +38,15 @@
 
 - (void)publishClick
 {
-    XMGPublishViewController *publish = [[XMGPublishViewController alloc] init];
-    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:publish animated:NO completion:nil];
+//    XMGPublishViewController *publish = [[XMGPublishViewController alloc] init];
+//    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:publish animated:NO completion:nil];
+    
+    XMGPostWordViewController *postWord = [[XMGPostWordViewController alloc] init];
+    XMGNavigationController *nav = [[XMGNavigationController alloc] initWithRootViewController:postWord];
+    
+    // 这里不能使用self来弹出其他控制器, 因为self执行了dismiss操作
+    UIViewController *root = [UIApplication sharedApplication].keyWindow.rootViewController;
+    [root presentViewController:nav animated:YES completion:nil];
 }
 
 - (void)layoutSubviews
