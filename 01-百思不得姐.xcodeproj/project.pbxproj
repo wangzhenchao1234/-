@@ -17,6 +17,7 @@
 		70188AAE1B71BA86002BC352 /* XMGAddTagToolbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70188AAD1B71BA86002BC352 /* XMGAddTagToolbar.xib */; };
 		70188AB11B71E60C002BC352 /* XMGAddTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70188AB01B71E60C002BC352 /* XMGAddTagViewController.m */; };
 		70188AB41B71FB3A002BC352 /* XMGTagButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 70188AB31B71FB3A002BC352 /* XMGTagButton.m */; };
+		70188AB71B7204B2002BC352 /* XMGTagTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 70188AB61B7204B2002BC352 /* XMGTagTextField.m */; };
 		701EA76B1B6DFA9C00A558F3 /* XMGCommentHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 701EA76A1B6DFA9C00A558F3 /* XMGCommentHeaderView.m */; };
 		701EA76F1B6E063A00A558F3 /* XMGCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 701EA76D1B6E063A00A558F3 /* XMGCommentCell.m */; };
 		701EA7701B6E063A00A558F3 /* XMGCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 701EA76E1B6E063A00A558F3 /* XMGCommentCell.xib */; };
@@ -112,6 +113,8 @@
 		70188AB01B71E60C002BC352 /* XMGAddTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGAddTagViewController.m; sourceTree = "<group>"; };
 		70188AB21B71FB3A002BC352 /* XMGTagButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTagButton.h; sourceTree = "<group>"; };
 		70188AB31B71FB3A002BC352 /* XMGTagButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTagButton.m; sourceTree = "<group>"; };
+		70188AB51B7204B2002BC352 /* XMGTagTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTagTextField.h; sourceTree = "<group>"; };
+		70188AB61B7204B2002BC352 /* XMGTagTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTagTextField.m; sourceTree = "<group>"; };
 		701EA7691B6DFA9C00A558F3 /* XMGCommentHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGCommentHeaderView.h; sourceTree = "<group>"; };
 		701EA76A1B6DFA9C00A558F3 /* XMGCommentHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGCommentHeaderView.m; sourceTree = "<group>"; };
 		701EA76C1B6E063A00A558F3 /* XMGCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGCommentCell.h; sourceTree = "<group>"; };
@@ -290,6 +293,8 @@
 				70188AAD1B71BA86002BC352 /* XMGAddTagToolbar.xib */,
 				70188AB21B71FB3A002BC352 /* XMGTagButton.h */,
 				70188AB31B71FB3A002BC352 /* XMGTagButton.m */,
+				70188AB51B7204B2002BC352 /* XMGTagTextField.h */,
+				70188AB61B7204B2002BC352 /* XMGTagTextField.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -806,6 +811,7 @@
 				70DA0D401B60760600DD59F1 /* XMGRecommendCategory.m in Sources */,
 				7035021C1B6DA83500CDF81B /* XMGUser.m in Sources */,
 				706988641B64B88C00DA90AA /* XMGPushGuideView.m in Sources */,
+				70188AB71B7204B2002BC352 /* XMGTagTextField.m in Sources */,
 				706988781B65BB6500DA90AA /* XMGTopic.m in Sources */,
 				706988831B65DE0E00DA90AA /* NSDate+XMGExtension.m in Sources */,
 				7015AD931B6A1D15008460CD /* XMGTopicVoiceView.m in Sources */,
