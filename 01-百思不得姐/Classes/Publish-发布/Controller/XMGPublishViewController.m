@@ -2,8 +2,8 @@
 //  XMGPublishViewController.m
 //  01-百思不得姐
 //
-//  Created by xiaomage on 15/7/29.
-//  Copyright (c) 2015年 小码哥. All rights reserved.
+//  Created by wangzhenchao on 16/7/29.
+//  Copyright (c) 2016年 XMG王振超. All rights reserved.
 //
 
 #import "XMGPublishViewController.h"
@@ -11,6 +11,7 @@
 #import "XMGPostWordViewController.h"
 #import "XMGNavigationController.h"
 #import <POP.h>
+#import "XMGLoginTool.h"
 
 static CGFloat const XMGAnimationDelay = 0.1;
 static CGFloat const XMGSpringFactor = 10;
@@ -74,6 +75,8 @@ static CGFloat const XMGSpringFactor = 10;
     CGFloat centerX = XMGScreenW * 0.5;
     CGFloat centerEndY = XMGScreenH * 0.2;
     CGFloat centerBeginY = centerEndY - XMGScreenH;
+    sloganView.centerY = centerBeginY;
+    sloganView.centerX = centerX;
     anim.fromValue = [NSValue valueWithCGPoint:CGPointMake(centerX, centerBeginY)];
     anim.toValue = [NSValue valueWithCGPoint:CGPointMake(centerX, centerEndY)];
     anim.beginTime = CACurrentMediaTime() + images.count * XMGAnimationDelay;
@@ -90,6 +93,9 @@ static CGFloat const XMGSpringFactor = 10;
 {
     [self cancelWithCompletionBlock:^{
         if (button.tag == 2) {
+            // 判断是否登录
+            if ([XMGLoginTool getUid:YES] == nil) return;
+            
             XMGPostWordViewController *postWord = [[XMGPostWordViewController alloc] init];
             XMGNavigationController *nav = [[XMGNavigationController alloc] initWithRootViewController:postWord];
             

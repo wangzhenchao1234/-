@@ -2,8 +2,8 @@
 //  AppDelegate.m
 //  01-百思不得姐
 //
-//  Created by xiaomage on 15/7/22.
-//  Copyright (c) 2015年 小码哥. All rights reserved.
+//  Created by wangzhenchao on 16/7/22.
+//  Copyright (c) 2016年 XMG王振超. All rights reserved.
 //
 
 #import "AppDelegate.h"
@@ -11,7 +11,7 @@
 #import "XMGPushGuideView.h"
 #import "XMGTopWindow.h"
 
-@interface AppDelegate () // <UITabBarControllerDelegate>
+@interface AppDelegate () <UITabBarControllerDelegate>
 
 @end
 
@@ -27,21 +27,20 @@
 //    XMGTabBarController *tabBarController = [[XMGTabBarController alloc] init];
 //    tabBarController.delegate = self;
     self.window.rootViewController = [[XMGTabBarController alloc] init];
-    
     // 显示窗口
     [self.window makeKeyAndVisible];
     
     // 显示推送引导
-//    [XMGPushGuideView show];
+    [XMGPushGuideView show];
     return YES;
 }
 
 #pragma mark - <UITabBarControllerDelegate>
-//- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
-//{
-//    // 发出一个通知
-//    [XMGNoteCenter postNotificationName:XMGTabBarDidSelectNotification object:nil userInfo:nil];
-//}
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
+{
+    // 发出一个通知
+    [XMGNoteCenter postNotificationName:XMGTabBarDidSelectNotification object:nil userInfo:nil];
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -61,7 +60,7 @@
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     
     // 添加一个window, 点击这个window, 可以让屏幕上的scrollView滚到最顶部
-    [XMGTopWindow show];
+   // [XMGTopWindow show];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {

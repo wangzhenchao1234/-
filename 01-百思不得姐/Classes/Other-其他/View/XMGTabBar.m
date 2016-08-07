@@ -2,8 +2,8 @@
 //  XMGTabBar.m
 //  01-百思不得姐
 //
-//  Created by xiaomage on 15/7/22.
-//  Copyright (c) 2015年 小码哥. All rights reserved.
+//  Created by wangzhenchao on 16/7/22.
+//  Copyright (c) 2016年 XMG王振超. All rights reserved.
 //
 
 #import "XMGTabBar.h"
@@ -38,15 +38,8 @@
 
 - (void)publishClick
 {
-//    XMGPublishViewController *publish = [[XMGPublishViewController alloc] init];
-//    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:publish animated:NO completion:nil];
-    
-    XMGPostWordViewController *postWord = [[XMGPostWordViewController alloc] init];
-    XMGNavigationController *nav = [[XMGNavigationController alloc] initWithRootViewController:postWord];
-    
-    // 这里不能使用self来弹出其他控制器, 因为self执行了dismiss操作
-    UIViewController *root = [UIApplication sharedApplication].keyWindow.rootViewController;
-    [root presentViewController:nav animated:YES completion:nil];
+    XMGPublishViewController *publish = [[XMGPublishViewController alloc] init];
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:publish animated:NO completion:nil];
 }
 
 - (void)layoutSubviews

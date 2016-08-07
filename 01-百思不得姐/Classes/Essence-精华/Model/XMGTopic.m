@@ -2,8 +2,8 @@
 //  XMGTopic.m
 //  01-百思不得姐
 //
-//  Created by xiaomage on 15/7/27.
-//  Copyright (c) 2015年 小码哥. All rights reserved.
+//  Created by wangzhenchao on 16/7/27.
+//  Copyright (c) 2016年 XMG王振超. All rights reserved.
 //
 
 #import "XMGTopic.h"
@@ -74,21 +74,23 @@
         
         // 根据段子的类型来计算cell的高度
         if (self.type == XMGTopicTypePicture) { // 图片帖子
-            // 图片显示出来的宽度
-            CGFloat pictureW = maxSize.width;
-            // 显示显示出来的高度
-            CGFloat pictureH = pictureW * self.height / self.width;
-            if (pictureH >= XMGTopicCellPictureMaxH) { // 图片高度过长
-                pictureH = XMGTopicCellPictureBreakH;
-                self.bigPicture = YES; // 大图
+            if (self.width != 0 && self.height != 0) {
+                // 图片显示出来的宽度
+                CGFloat pictureW = maxSize.width;
+                // 显示显示出来的高度
+                CGFloat pictureH = pictureW * self.height / self.width;
+                if (pictureH >= XMGTopicCellPictureMaxH) { // 图片高度过长
+                    pictureH = XMGTopicCellPictureBreakH;
+                    self.bigPicture = YES; // 大图
+                }
+                
+                // 计算图片控件的frame
+                CGFloat pictureX = XMGTopicCellMargin;
+                CGFloat pictureY = XMGTopicCellTextY + textH + XMGTopicCellMargin;
+                _pictureF = CGRectMake(pictureX, pictureY, pictureW, pictureH);
+                
+                _cellHeight += pictureH + XMGTopicCellMargin;
             }
-            
-            // 计算图片控件的frame
-            CGFloat pictureX = XMGTopicCellMargin;
-            CGFloat pictureY = XMGTopicCellTextY + textH + XMGTopicCellMargin;
-            _pictureF = CGRectMake(pictureX, pictureY, pictureW, pictureH);
-            
-            _cellHeight += pictureH + XMGTopicCellMargin;
         } else if (self.type == XMGTopicTypeVoice) { // 声音帖子
             CGFloat voiceX = XMGTopicCellMargin;
             CGFloat voiceY = XMGTopicCellTextY + textH + XMGTopicCellMargin;

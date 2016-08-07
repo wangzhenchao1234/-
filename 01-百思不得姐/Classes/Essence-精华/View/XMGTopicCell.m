@@ -2,8 +2,8 @@
 //  XMGTopicCell.m
 //  01-百思不得姐
 //
-//  Created by xiaomage on 15/7/27.
-//  Copyright (c) 2015年 小码哥. All rights reserved.
+//  Created by wangzhenchao on 16/7/27.
+//  Copyright (c) 2016年 XMG王振超. All rights reserved.
 //
 
 #import "XMGTopicCell.h"
@@ -14,8 +14,9 @@
 #import "XMGTopicVideoView.h"
 #import "XMGComment.h"
 #import "XMGUser.h"
+#import "XMGLoginTool.h"
 
-@interface XMGTopicCell()
+@interface XMGTopicCell() <UIActionSheetDelegate>
 /** 头像 */
 @property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
 /** 昵称 */
@@ -172,7 +173,22 @@
 }
 
 - (IBAction)more {
-    UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:nil delegate:nil cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"收藏", @"举报", nil];
+    UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"收藏", @"举报", nil];
     [sheet showInView:self.window];
+    
+}
+
+#pragma mark - <UIActionSheetDelegate>
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 2) return;
+    
+    if ([XMGLoginTool getUid] == nil) return;
+    
+    // 开始执行举报\收藏操作
 }
 @end

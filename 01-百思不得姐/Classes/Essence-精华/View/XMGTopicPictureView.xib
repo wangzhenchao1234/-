@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -12,16 +13,19 @@
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageBackground" translatesAutoresizingMaskIntoConstraints="NO" id="DnN-ev-RN6" userLabel="占位图片">
                     <rect key="frame" x="0.0" y="20" width="422" height="25"/>
+                    <animations/>
                     <constraints>
                         <constraint firstAttribute="height" constant="25" id="0pG-cd-WbO"/>
                     </constraints>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IRw-wO-0Xu" userLabel="图片">
                     <rect key="frame" x="0.0" y="0.0" width="422" height="278"/>
+                    <animations/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common-gif" translatesAutoresizingMaskIntoConstraints="NO" id="PaE-YL-46E" userLabel="GIF标识">
                     <rect key="frame" x="0.0" y="0.0" width="31" height="31"/>
+                    <animations/>
                     <constraints>
                         <constraint firstAttribute="width" constant="31" id="Seq-9b-ZU0"/>
                         <constraint firstAttribute="height" constant="31" id="VFX-ct-3t9"/>
@@ -29,6 +33,7 @@
                 </imageView>
                 <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f58-AK-bkU">
                     <rect key="frame" x="0.0" y="235" width="422" height="43"/>
+                    <animations/>
                     <constraints>
                         <constraint firstAttribute="height" constant="43" id="Opq-v7-GaY"/>
                     </constraints>
@@ -39,6 +44,7 @@
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hEQ-1x-ft8" userLabel="进度条控件" customClass="XMGProgressView">
                     <rect key="frame" x="161" y="89" width="100" height="100"/>
+                    <animations/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="100" id="4sh-vR-eI2"/>
@@ -46,6 +52,7 @@
                     </constraints>
                 </view>
             </subviews>
+            <animations/>
             <color key="backgroundColor" red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="f58-AK-bkU" secondAttribute="bottom" id="4x1-Y4-idx"/>

@@ -2,8 +2,8 @@
 //  NSDate+XMGExtension.m
 //  01-百思不得姐
 //
-//  Created by xiaomage on 15/7/27.
-//  Copyright (c) 2015年 小码哥. All rights reserved.
+//  Created by wangzhenchao on 16/7/27.
+//  Copyright (c) 2016年 XMG王振超. All rights reserved.
 //
 
 #import "NSDate+XMGExtension.h"
@@ -60,7 +60,7 @@
 - (BOOL)isYesterday
 {
     // 2014-12-31 23:59:59 -> 2014-12-31
-    // 2015-01-01 00:00:01 -> 2015-01-01
+    // 2016-01-01 00:00:01 -> 2016-01-01
     
     // 日期格式化类
     NSDateFormatter *fmt = [[NSDateFormatter alloc] init];

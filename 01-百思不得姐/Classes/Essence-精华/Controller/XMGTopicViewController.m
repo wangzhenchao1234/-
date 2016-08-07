@@ -2,8 +2,8 @@
 //  XMGTopicViewController.m
 //  01-百思不得姐
 //
-//  Created by xiaomage on 15/7/26.
-//  Copyright (c) 2015年 小码哥. All rights reserved.
+//  Created by wangzhenchao on 16/2/26.
+//  Copyright (c) 2016年 XMG王振超. All rights reserved.
 //
 
 #import "XMGTopicViewController.h"
@@ -84,6 +84,7 @@ static NSString * const XMGTopicCellId = @"topic";
 
 - (void)setupRefresh
 {
+   
     self.tableView.header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewTopics)];
     // 自动改变透明度
     self.tableView.header.autoChangeAlpha = YES;
@@ -116,6 +117,7 @@ static NSString * const XMGTopicCellId = @"topic";
     
     // 发送请求
     [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
+        
         if (self.params != params) return;
         
         // 存储maxtime

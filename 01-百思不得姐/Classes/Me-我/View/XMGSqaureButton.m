@@ -2,8 +2,8 @@
 //  XMGSqaureButton.m
 //  01-百思不得姐
 //
-//  Created by xiaomage on 15/8/3.
-//  Copyright (c) 2015年 小码哥. All rights reserved.
+//  Created by wangzhenchao on 16/8/3.
+//  Copyright (c) 2016年 XMG王振超. All rights reserved.
 //
 
 #import "XMGSqaureButton.h"
@@ -15,7 +15,7 @@
 {
     self.titleLabel.textAlignment = NSTextAlignmentCenter;
     [self setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    self.titleLabel.font = [UIFont systemFontOfSize:15];
+    self.titleLabel.font = [UIFont systemFontOfSize:16];
     [self setBackgroundImage:[UIImage imageNamed:@"mainCellBackground"] forState:UIControlStateNormal];
 }
 
@@ -37,7 +37,7 @@
     [super layoutSubviews];
     
     // 调整图片
-    self.imageView.y = self.height * 0.15;
+    self.imageView.y = self.height * 0.16;
     self.imageView.width = self.width * 0.5;
     self.imageView.height = self.imageView.width;
     self.imageView.centerX = self.width * 0.5;

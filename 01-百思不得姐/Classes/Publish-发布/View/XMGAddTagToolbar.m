@@ -2,8 +2,8 @@
 //  XMGAddTagToolbar.m
 //  01-百思不得姐
 //
-//  Created by xiaomage on 15/8/5.
-//  Copyright (c) 2015年 小码哥. All rights reserved.
+//  Created by wangzhenchao on 16/8/5.
+//  Copyright (c) 2016年 XMG王振超. All rights reserved.
 //
 
 #import "XMGAddTagToolbar.h"
@@ -38,6 +38,9 @@
     addButton.x = XMGTagMargin;
     [self.topView addSubview:addButton];
     self.addButton = addButton;
+    
+    // 默认就拥有2个标签
+    [self createTagLabels:@[@"吐槽", @"糗事"]];
 }
 
 - (void)addButtonClick
@@ -51,6 +54,52 @@
     UIViewController *root = [UIApplication sharedApplication].keyWindow.rootViewController;
     UINavigationController *nav = (UINavigationController *)root.presentedViewController;
     [nav pushViewController:vc animated:YES];
+}
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+    for (int i = 0; i<self.tagLabels.count; i++) {
+        UILabel *tagLabel = self.tagLabels[i];
+        
+        // 设置位置
+        if (i == 0) { // 最前面的标签
+            tagLabel.x = 0;
+            tagLabel.y = 0;
+        } else { // 其他标签
+            UILabel *lastTagLabel = self.tagLabels[i - 1];
+            // 计算当前行左边的宽度
+            CGFloat leftWidth = CGRectGetMaxX(lastTagLabel.frame) + XMGTagMargin;
+            // 计算当前行右边的宽度
+            CGFloat rightWidth = self.topView.width - leftWidth;
+            if (rightWidth >= tagLabel.width) { // 按钮显示在当前行
+                tagLabel.y = lastTagLabel.y;
+                tagLabel.x = leftWidth;
+            } else { // 按钮显示在下一行
+                tagLabel.x = 0;
+                tagLabel.y = CGRectGetMaxY(lastTagLabel.frame) + XMGTagMargin;
+            }
+        }
+    }
+    
+    // 最后一个标签
+    UILabel *lastTagLabel = [self.tagLabels lastObject];
+    CGFloat leftWidth = CGRectGetMaxX(lastTagLabel.frame) + XMGTagMargin;
+    
+    // 更新textField的frame
+    if (self.topView.width - leftWidth >= self.addButton.width) {
+        self.addButton.y = lastTagLabel.y;
+        self.addButton.x = leftWidth;
+    } else {
+        self.addButton.x = 0;
+        self.addButton.y = CGRectGetMaxY(lastTagLabel.frame) + XMGTagMargin;
+    }
+    
+    // 整体的高度
+    CGFloat oldH = self.height;
+    self.height = CGRectGetMaxY(self.addButton.frame) + 45;
+    self.y -= self.height - oldH;
 }
 
 /**
@@ -74,42 +123,10 @@
         tagLabel.height = XMGTagH;
         tagLabel.textColor = [UIColor whiteColor];
         [self.topView addSubview:tagLabel];
-        
-        // 设置位置
-        if (i == 0) { // 最前面的标签
-            tagLabel.x = 0;
-            tagLabel.y = 0;
-        } else { // 其他标签
-            UILabel *lastTagLabel = self.tagLabels[i - 1];
-            // 计算当前行左边的宽度
-            CGFloat leftWidth = CGRectGetMaxX(lastTagLabel.frame) + XMGTagMargin;
-            // 计算当前行右边的宽度
-            CGFloat rightWidth = self.topView.width - leftWidth;
-            if (rightWidth >= tagLabel.width) { // 按钮显示在当前行
-                tagLabel.y = lastTagLabel.y;
-                tagLabel.x = leftWidth;
-            } else { // 按钮显示在下一行
-                tagLabel.x = 0;
-                tagLabel.y = CGRectGetMaxY(lastTagLabel.frame) + XMGTagMargin;
-            }
-        }
-    }
-
-    // 最后一个标签
-    UILabel *lastTagLabel = [self.tagLabels lastObject];
-    CGFloat leftWidth = CGRectGetMaxX(lastTagLabel.frame) + XMGTagMargin;
-    
-    // 更新textField的frame
-    if (self.topView.width - leftWidth >= self.addButton.width) {
-        self.addButton.y = lastTagLabel.y;
-        self.addButton.x = leftWidth;
-    } else {
-        self.addButton.x = 0;
-        self.addButton.y = CGRectGetMaxY(lastTagLabel.frame) + XMGTagMargin;
     }
     
-    XMGLog(@"%zd", self.tagLabels.count);
-    
+    // 重新布局子控件
+    [self setNeedsLayout];
 }
 
 @end

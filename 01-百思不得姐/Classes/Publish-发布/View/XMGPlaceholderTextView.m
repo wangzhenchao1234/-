@@ -2,8 +2,8 @@
 //  XMGPlaceholderTextView.m
 //  01-百思不得姐
 //
-//  Created by xiaomage on 15/8/5.
-//  Copyright (c) 2015年 小码哥. All rights reserved.
+//  Created by wangzhenchao on 16/8/5.
+//  Copyright (c) 2016年 XMG王振超. All rights reserved.
 //
 
 #import "XMGPlaceholderTextView.h"
@@ -36,13 +36,13 @@
         self.alwaysBounceVertical = YES;
         
         // 默认字体
-        self.font = [UIFont systemFontOfSize:15];
+        self.font = [UIFont systemFontOfSize:16];
         
         // 默认的占位文字颜色
         self.placeholderColor = [UIColor grayColor];
         
         // 监听文字改变
-        [XMGNoteCenter addObserver:self selector:@selector(textDidChange) name:UITextViewTextDidChangeNotification object:nil];
+        [XMGNoteCenter addObserver:self selector:@selector(textDidChange) name:UITextViewTextDidChangeNotification object:self];
     }
     return self;
 }

@@ -2,8 +2,8 @@
 //  XMGTopic.h
 //  01-百思不得姐
 //
-//  Created by xiaomage on 15/7/27.
-//  Copyright (c) 2015年 小码哥. All rights reserved.
+//  Created by wangzhenchao on 16/7/27.
+//  Copyright (c) 2016年 XMG王振超. All rights reserved.
 //  帖子
 
 #import <UIKit/UIKit.h>
@@ -51,6 +51,9 @@
 @property (nonatomic, assign) NSInteger videotime;
 /** 播放次数 */
 @property (nonatomic, assign) NSInteger playcount;
+/**视频内容*/
+@property(nonatomic,copy)NSString*videouri;
+
 
 /** qzone_uid */
 //@property (nonatomic, copy) NSString *qzone_uid;

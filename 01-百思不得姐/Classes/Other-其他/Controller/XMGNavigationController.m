@@ -2,8 +2,8 @@
 //  XMGNavigationController.m
 //  01-百思不得姐
 //
-//  Created by xiaomage on 15/7/22.
-//  Copyright (c) 2015年 小码哥. All rights reserved.
+//  Created by wangzhenchao on 16/7/22.
+//  Copyright (c) 2016年 XMG王振超. All rights reserved.
 //
 
 #import "XMGNavigationController.h"
@@ -42,6 +42,9 @@
     [super viewDidLoad];
     
 //    [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
+    
+    // 如果滑动移除控制器的功能失效，清空代理(让导航控制器重新设置这个功能)
+    self.interactivePopGestureRecognizer.delegate = nil;
 }
 
 /**

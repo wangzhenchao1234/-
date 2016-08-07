@@ -2,8 +2,8 @@
 //  XMGAddTagViewController.m
 //  01-百思不得姐
 //
-//  Created by xiaomage on 15/8/5.
-//  Copyright (c) 2015年 小码哥. All rights reserved.
+//  Created by wangzhenchao on 16/8/5.
+//  Copyright (c) 2016年 XMG王振超. All rights reserved.
 //
 
 #import "XMGAddTagViewController.h"
@@ -37,7 +37,6 @@
 {
     if (!_addButton) {
         UIButton *addButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        addButton.width = self.contentView.width;
         addButton.height = 35;
         [addButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [addButton addTarget:self action:@selector(addButtonClick) forControlEvents:UIControlEventTouchUpInside];
@@ -52,54 +51,52 @@
     return _addButton;
 }
 
+- (UIView *)contentView
+{
+    if (!_contentView) {
+        UIView *contentView = [[UIView alloc] init];
+        [self.view addSubview:contentView];
+        self.contentView = contentView;
+    }
+    return _contentView;
+}
+
+- (XMGTagTextField *)textField
+{
+    if (!_textField) {
+        __weak typeof(self) weakSelf = self;
+        XMGTagTextField *textField = [[XMGTagTextField alloc] init];
+        textField.deleteBlock = ^{
+            if (weakSelf.textField.hasText) return;
+            
+            [weakSelf tagButtonClick:[weakSelf.tagButtons lastObject]];
+        };
+        textField.delegate = self;
+        [textField addTarget:self action:@selector(textDidChange) forControlEvents:UIControlEventEditingChanged];
+        [textField becomeFirstResponder];
+        [self.contentView addSubview:textField];
+        self.textField = textField;
+    }
+    return _textField;
+}
+
 #pragma mark - 初始化
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     [self setupNav];
-    
-    [self setupContentView];
-    
-    [self setupTextFiled];
-    
-    [self setupTags];
 }
 
 - (void)setupTags
 {
-    for (NSString *tag in self.tags) {
-        self.textField.text = tag;
-        [self addButtonClick];
-    }
-}
-
-- (void)setupContentView
-{
-    UIView *contentView = [[UIView alloc] init];
-    contentView.x = XMGTagMargin;
-    contentView.width = self.view.width - 2 * contentView.x;
-    contentView.y = 64 + XMGTagMargin;
-    contentView.height = XMGScreenH;
-    [self.view addSubview:contentView];
-    self.contentView = contentView;
-}
-
-- (void)setupTextFiled
-{
-    __weak typeof(self) weakSelf = self;
-    XMGTagTextField *textField = [[XMGTagTextField alloc] init];
-    textField.width = self.contentView.width;
-    textField.deleteBlock = ^{
-        if (weakSelf.textField.hasText) return;
+    if (self.tags.count) {
+        for (NSString *tag in self.tags) {
+            self.textField.text = tag;
+            [self addButtonClick];
+        }
         
-        [weakSelf tagButtonClick:[weakSelf.tagButtons lastObject]];
-    };
-//    textField.clearButtonMode = UITextFieldViewModeAlways;
-    textField.delegate = self;
-    [textField addTarget:self action:@selector(textDidChange) forControlEvents:UIControlEventEditingChanged];
-    [textField becomeFirstResponder];
-    [self.contentView addSubview:textField];
-    self.textField = textField;
+        self.tags = nil;
+    }
 }
 
 - (void)setupNav
@@ -121,6 +118,25 @@
     !self.tagsBlock ? : self.tagsBlock(tags);
     
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+/**
+ * 布局控制器view的子控件
+ */
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    
+    self.contentView.x = XMGTagMargin;
+    self.contentView.width = self.view.width - 2 * self.contentView.x;
+    self.contentView.y = 64 + XMGTagMargin;
+    self.contentView.height = XMGScreenH;
+    
+    self.textField.width = self.contentView.width;
+    
+    self.addButton.width = self.contentView.width;
+    
+    [self setupTags];
 }
 
 #pragma mark - 监听文字改变
@@ -244,6 +260,9 @@
         self.textField.x = 0;
         self.textField.y = CGRectGetMaxY(lastTagButton.frame) + XMGTagMargin;
     }
+    
+    // 更新“添加标签”的frame
+    self.addButton.y = CGRectGetMaxY(self.textField.frame) + XMGTagMargin;
 }
 
 /**

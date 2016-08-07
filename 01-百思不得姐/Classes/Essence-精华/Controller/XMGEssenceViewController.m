@@ -2,8 +2,8 @@
 //  XMGEssenceViewController.m
 //  01-百思不得姐
 //
-//  Created by xiaomage on 15/7/22.
-//  Copyright (c) 2015年 小码哥. All rights reserved.
+//  Created by wangzhenchao on 16/7/22.
+//  Copyright (c) 2016年 XMG王振超. All rights reserved.
 //
 
 #import "XMGEssenceViewController.h"
@@ -104,7 +104,7 @@
         button.x = i * width;
         UIViewController *vc = self.childViewControllers[i];
         [button setTitle:vc.title forState:UIControlStateNormal];
-//        [button layoutIfNeeded]; // 强制布局(强制更新子控件的frame)
+//      [button layoutIfNeeded]; // 强制布局(强制更新子控件的frame)
         [button setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
         [button setTitleColor:[UIColor redColor] forState:UIControlStateDisabled];
         button.titleLabel.font = [UIFont systemFontOfSize:14];

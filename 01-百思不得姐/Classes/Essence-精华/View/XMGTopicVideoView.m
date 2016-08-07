@@ -2,19 +2,21 @@
 //  XMGTopicVideoView.m
 //  01-百思不得姐
 //
-//  Created by xiaomage on 15/7/30.
-//  Copyright (c) 2015年 小码哥. All rights reserved.
+//  Created by wangzhenchao on 16/7/30.
+//  Copyright (c) 2016年 XMG王振超. All rights reserved.
 //
 
 #import "XMGTopicVideoView.h"
 #import "XMGTopic.h"
 #import <UIImageView+WebCache.h>
 #import "XMGShowPictureViewController.h"
+#import "VideoPlayerViewController.h"
 
 @interface XMGTopicVideoView()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *playcountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *videotimeLabel;
+
 @end
 
 @implementation XMGTopicVideoView
@@ -50,4 +52,14 @@
     NSInteger second = topic.videotime % 60;
     self.videotimeLabel.text = [NSString stringWithFormat:@"%02zd:%02zd", minute, second];
 }
+//包放视频按钮
+- (IBAction)playVideo:(UIButton *)sender {
+    
+    VideoPlayerViewController*vP = [[VideoPlayerViewController alloc]init];
+    vP.topic = self.topic;
+    
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:vP animated:YES completion:nil];
+    
+}
+
 @end
